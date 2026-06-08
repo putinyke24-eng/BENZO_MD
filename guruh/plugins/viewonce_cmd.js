@@ -56,11 +56,19 @@ function extractViewOnce(msg) {
 //  HELPER — download view-once from a quoted context (.vv command)
 // ════════════════════════════════════════════════════════════════════
 async function downloadViewOnceFromCtx(ctx) {
-    const quoted    = ctx.m.message?.extendedTextMessage?.contextInfo?.quotedMessage;
+    // Check all possible message wrapper types for contextInfo
+    const contextInfo =
+        ctx.m.message?.extendedTextMessage?.contextInfo ||
+        ctx.m.message?.imageMessage?.contextInfo        ||
+        ctx.m.message?.videoMessage?.contextInfo        ||
+        ctx.m.message?.audioMessage?.contextInfo        ||
+        ctx.m.message?.stickerMessage?.contextInfo      ||
+        null;
+
+    const quoted    = contextInfo?.quotedMessage || ctx.m.quoted || null;
     const voMessage = extractViewOnce(quoted);
     if (!voMessage) return null;
 
-    const contextInfo = ctx.m.message?.extendedTextMessage?.contextInfo;
     const fakeMsg = {
         key: {
             id:          contextInfo?.stanzaId,
@@ -220,10 +228,22 @@ addCmd({
     usage:   'Reply to a view-once with .vv',
     category: 'media',
     handler: async (ctx) => {
-        const quoted = ctx.m.message?.extendedTextMessage?.contextInfo?.quotedMessage;
+        // Pull contextInfo from all possible wrapper types
+        const _inner =
+            ctx.m.message?.extendedTextMessage ||
+            ctx.m.message?.imageMessage        ||
+            ctx.m.message?.videoMessage        ||
+            ctx.m.message?.audioMessage        ||
+            ctx.m.message?.stickerMessage      ||
+            null;
+
+        const ci = _inner?.contextInfo || null;
+        const quotedMsgId = ci?.stanzaId || null;
+
+        const quoted = ci?.quotedMessage || ctx.m.quoted || null;
         const voMsg  = extractViewOnce(quoted);
 
-        if (!voMsg) {
+        if (!voMsg && !quotedMsgId) {
             return ctx.sock.sendMessage(
                 ctx.from,
                 { text: '❌ Reply to a *view-once* image or video with *.vv*\n\n_Make sure to reply directly to the view-once message._', contextInfo: channelCtx() },
@@ -233,12 +253,30 @@ addCmd({
 
         await ctx.react('⏳');
 
-        const result = await downloadViewOnceFromCtx(ctx);
+        // ── Strategy 1: use the in-memory store (most reliable) ──
+        let result = null;
+        if (quotedMsgId && voStore.has(quotedMsgId)) {
+            const stored = voStore.get(quotedMsgId);
+            result = await downloadViewOnceFromStored(stored).catch(() => null);
+        }
+
+        // ── Strategy 2: fall back to re-downloading via contextInfo ──
+        if (!result?.buf && voMsg) {
+            result = await downloadViewOnceFromCtx(ctx).catch(() => null);
+        }
+
         if (!result?.buf) {
             await ctx.react('❌');
             return ctx.sock.sendMessage(
                 ctx.from,
-                { text: '❌ Could not download the view-once media. It may have *expired* or been deleted.', contextInfo: channelCtx() },
+                {
+                    text:
+                        '❌ *Cannot find the view-once media.*\n\n' +
+                        '• Make sure to *reply directly* to the view-once message\n' +
+                        '• The media may have *expired* (older than 20 min)\n\n' +
+                        '_Try sending a fresh view-once and use .vv immediately_',
+                    contextInfo: channelCtx(),
+                },
                 { quoted: ctx.m }
             );
         }
