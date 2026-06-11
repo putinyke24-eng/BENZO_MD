@@ -1,7 +1,7 @@
 'use strict';
 // ╔══════════════════════════════════════════════════════════════╗
-//  🐾  BLACK PANTHER MD  —  Status Engine
-//  👑  Owner : GuruTech  |  📞 +254105521300
+//  🔗  BENZOMD  —  Status Engine
+//  👑  Owner : Putinytech  |  📞 +254794703644
 // ─────────────────────────────────────────────────────────────
 //  Features:
 //  ✅  Queue-based — never drops a status even under high load
