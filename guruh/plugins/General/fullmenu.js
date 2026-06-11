@@ -128,7 +128,7 @@ export default {
       ).join('\n');
       await client.sendMessage(m.chat, {
         text: `╭─❏ 「 Categories」
-${iosCategoryText}\n╰───────────────\n> 🌐 Hosted by Toxic-Hosting\n> 🔗 hosting.toxicx.tech`,
+${iosCategoryText}\n╰───────────────\n> 🌐 Hosted by GuruTech Hosting\n> 🔗 hosting.wa.me/254105521300`,
         contextInfo: { mentionedJid: [m.sender] }
       });
       await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });

@@ -1,4 +1,4 @@
-import { makeEffect } from '../../lib/toxicApi.js';
+import { makeEffect } from '../../lib/api.js';
 import { sendInteractive } from '../../lib/sendInteractive.js';
 
 const EFFECTS = [

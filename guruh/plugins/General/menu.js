@@ -114,8 +114,8 @@ export default {
                 `│ ${prefix}utilsmenu — Utility commands\n` +
                 `│ ${prefix}privacymenu — Privacy commands\n` +
                 `╰───────────────\n` +
-                `> 🌐 Hosted by Toxic-Hosting\n` +
-                `> 🔗 hosting.toxicx.tech`;
+                `> 🌐 Hosted by GuruTech Hosting\n` +
+                `> 🔗 hosting.wa.me/254105521300`;
             await client.sendMessage(m.chat, {
                 text: iosMenuText, mentions: [m.sender]
             });
@@ -136,7 +136,7 @@ export default {
                             mediaType: 1,
                             thumbnail: pict,
                             mediaUrl: '',
-                            sourceUrl: 'https://github.com/xhclintohn/BLACK-PANTHER-MD',
+                            sourceUrl: 'https://github.com/koyoteh/BLACK-PANTHER',
                             showAdAttribution: false,
                             renderLargerThumbnail: true }
                     },
@@ -147,8 +147,8 @@ export default {
                                 name: 'cta_url',
                                 buttonParamsJson: JSON.stringify({
                                     display_text: 'GitHub Repo',
-                                    url: 'https://github.com/xhclintohn/BLACK-PANTHER-MD',
-                                    merchant_url: 'https://github.com/xhclintohn/BLACK-PANTHER-MD'
+                                    url: 'https://github.com/koyoteh/BLACK-PANTHER',
+                                    merchant_url: 'https://github.com/koyoteh/BLACK-PANTHER'
                                 })
                             },
                             {
@@ -176,7 +176,7 @@ export default {
                         mediaType: 1,
                         thumbnail: pict,
                         mediaUrl: '',
-                        sourceUrl: 'https://github.com/xhclintohn/BLACK-PANTHER-MD',
+                        sourceUrl: 'https://github.com/koyoteh/BLACK-PANTHER',
                         showAdAttribution: false,
                         renderLargerThumbnail: true }
                 }
@@ -211,8 +211,8 @@ export default {
         await new Promise(resolve => setTimeout(resolve, 500));
         try {
             const audioBuffer = fs.readFileSync(randomFile);
-            await client.sendMessage(m.chat, { audio: audioBuffer, ptt: true, mimetype: 'audio/mpeg', fileName: 'toxic-menu.m4a' });
+            await client.sendMessage(m.chat, { audio: audioBuffer, ptt: true, mimetype: 'audio/mpeg', fileName: 'panther-menu.m4a' });
         } catch {
-            await client.sendMessage(m.chat, { audio: { url: randomFile }, ptt: true, mimetype: 'audio/mpeg', fileName: 'toxic-menu.m4a' });
+            await client.sendMessage(m.chat, { audio: { url: randomFile }, ptt: true, mimetype: 'audio/mpeg', fileName: 'panther-menu.m4a' });
         }
     } };

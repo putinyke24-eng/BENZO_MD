@@ -6,7 +6,7 @@ export default {
     aliases: ['p', 'speed', 'latency', 'response', 'pong'],
     description: 'Checks the bot response time and server status',
     run: async (context) => {
-        const { client, m, toxicspeed, prefix } = context;
+        const { client, m, botspeed, prefix } = context;
         const bName = botname || 'BLACK-PANTHER-MD';
         try {
             await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -14,7 +14,7 @@ export default {
 
             const startTime = Date.now();
             const latency = Date.now() - startTime;
-            const responseSpeed = (toxicspeed || latency / 1000 || 0.0094).toFixed(4);
+            const responseSpeed = (botspeed || latency / 1000 || 0.0094).toFixed(4);
 
             const formatUptime = (seconds) => {
                 const d = Math.floor(seconds / 86400);
@@ -29,7 +29,7 @@ export default {
             const totalMB = (mem.heapTotal / 1024 / 1024).toFixed(2);
             const displayName = m.pushName || m.sender.split('@')[0].split(':')[0];
 
-            const text = `╭─❏ 「 Pɪɴɢ 」\n│ Hoi   : ${displayName}\n│ Prefix : ${prefix || '.'}\n╰───────────────\n\n╭─❏ 「 Iɴꜰᴏ 」\n│ 𝐋𝐚𝐭𝐞𝐧𝐜𝐲 : ${responseSpeed}ms\n│ 𝐒𝐞𝐫𝐯𝐞𝐫 𝐓𝐢𝐦𝐞 : ${new Date().toLocaleString()}\n│ 𝐔𝐩𝐭𝐢𝐦𝐞 : ${formatUptime(process.uptime())}\n│ 𝐌𝐞𝐦𝐨𝐫𝐲 : ${usedMB}/${totalMB} MB\n│ 𝐍𝐨𝐝𝐞𝐉𝐒 : ${process.version}\n│ 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 : Toxic-Hosting ⚡\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
+            const text = `╭─❏ 「 Pɪɴɢ 」\n│ Hoi   : ${displayName}\n│ Prefix : ${prefix || '.'}\n╰───────────────\n\n╭─❏ 「 Iɴꜰᴏ 」\n│ 𝐋𝐚𝐭𝐞𝐧𝐜𝐲 : ${responseSpeed}ms\n│ 𝐒𝐞𝐫𝐯𝐞𝐫 𝐓𝐢𝐦𝐞 : ${new Date().toLocaleString()}\n│ 𝐔𝐩𝐭𝐢𝐦𝐞 : ${formatUptime(process.uptime())}\n│ 𝐌𝐞𝐦𝐨𝐫𝐲 : ${usedMB}/${totalMB} MB\n│ 𝐍𝐨𝐝𝐞𝐉𝐒 : ${process.version}\n│ 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 : GuruTech Hosting ⚡\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
             await sendInteractive(client, m, text);
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });

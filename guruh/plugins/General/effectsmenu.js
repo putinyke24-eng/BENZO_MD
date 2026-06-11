@@ -41,7 +41,7 @@ export default {
                     body: '30 text effects. Go make something ugly.',
                     mediaType: 1,
                     thumbnail: pict,
-                    sourceUrl: 'https://github.com/xhclintohn/BLACK-PANTHER-MD',
+                    sourceUrl: 'https://github.com/koyoteh/BLACK-PANTHER',
                     showAdAttribution: false,
                     renderLargerThumbnail: false }
             }

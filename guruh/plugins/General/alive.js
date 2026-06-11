@@ -54,7 +54,7 @@ export default {
               audio: { url: audioPath },
               ptt: true,
               mimetype: 'audio/mpeg',
-              fileName: 'toxic-alive.mp3'
+              fileName: 'panther-alive.mp3'
             });
             break;
           }

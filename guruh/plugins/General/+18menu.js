@@ -49,7 +49,7 @@ export default {
           title: `BLACK-PANTHER-MD WA bot`,
           body: `©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`,
           thumbnail: pict,
-          sourceUrl: `https://github.com/xhclintohn/BLACK-PANTHER-MD`,
+          sourceUrl: `https://github.com/koyoteh/BLACK-PANTHER`,
           mediaType: 1,
           renderLargerThumbnail: true
         }

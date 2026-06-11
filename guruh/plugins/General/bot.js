@@ -10,7 +10,7 @@ import { getDeviceMode } from '../../lib/deviceMode.js';
 
 export default {
     name: 'start',
-    aliases: ['alive', 'online', 'toxic', 'bot', 'status', 'active', 'check'],
+    aliases: ['alive', 'online', 'bot', 'status', 'active', 'check'],
     description: 'Check if bot is alive',
     run: async (context) => {
         const { client, m, mode, pict, botname, text, prefix } = context;
@@ -40,7 +40,7 @@ export default {
             if (possibleFiles.length > 0) {
                 const randomFile = possibleFiles[Math.floor(Math.random() * possibleFiles.length)];
                 await client.sendMessage(m.chat, {
-                    audio: { url: randomFile }, ptt: true, mimetype: 'audio/mpeg', fileName: 'toxic-start.mp3'
+                    audio: { url: randomFile }, ptt: true, mimetype: 'audio/mpeg', fileName: 'panther-start.mp3'
                 });
             }
         }

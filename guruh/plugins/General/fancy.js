@@ -67,7 +67,7 @@ export default {
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
 
     if (!text) {
-      const example = 'Toxic';
+      const example = 'PANTHER';
       let preview = `╭─❏ 「 Fᴀɴᴄʏ Tᴇxᴛ」
 │
 │ Usage: ${prefix}fancy <number> <text>\n│ Example: ${prefix}fancy 1 BLACK-PANTHER-MD\n│

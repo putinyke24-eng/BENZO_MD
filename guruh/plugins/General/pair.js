@@ -1,4 +1,4 @@
-import Toxic_Tech, { useMultiFileAuthState, delay, makeCacheableSignalKeyStore, fetchLatestBaileysVersion } from '@whiskeysockets/baileys';
+import BaileysClient, { useMultiFileAuthState, delay, makeCacheableSignalKeyStore, fetchLatestBaileysVersion } from '@whiskeysockets/baileys';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -56,25 +56,25 @@ export default {
             const sessionId = makeid(8);
             let tempPath;
             try {
-                const basePath = path.join(__dirname, '..', '..', 'features', 'toxicmd', 'temp');
+                const basePath = path.join(__dirname, '..', '..', 'features', 'panthersession', 'temp');
                 if (fs.existsSync(basePath) && !fs.statSync(basePath).isDirectory()) {
                     fs.unlinkSync(basePath);
                 }
-                const toxicmdPath = path.join(__dirname, '..', '..', 'features', 'toxicmd');
-                if (fs.existsSync(toxicmdPath) && !fs.statSync(toxicmdPath).isDirectory()) {
-                    fs.unlinkSync(toxicmdPath);
+                const panthersessionPath = path.join(__dirname, '..', '..', 'features', 'panthersession');
+                if (fs.existsSync(panthersessionPath) && !fs.statSync(panthersessionPath).isDirectory()) {
+                    fs.unlinkSync(panthersessionPath);
                 }
                 tempPath = path.join(basePath, sessionId);
                 fs.mkdirSync(tempPath, { recursive: true });
             } catch (dirErr) {
-                tempPath = path.join('/tmp', 'toxic-pair-' + sessionId);
+                tempPath = path.join('/tmp', 'panther-pair-' + sessionId);
                 fs.mkdirSync(tempPath, { recursive: true });
             }
 
             const { version } = await fetchLatestBaileysVersion();
             const { state, saveCreds } = await useMultiFileAuthState(tempPath);
 
-            const pairSocket = Toxic_Tech({
+            const pairSocket = BaileysClient({
                 version,
                 auth: {
                     creds: state.creds,
