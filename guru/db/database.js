@@ -4,7 +4,7 @@ const path     = require('path');
 const fs       = require('fs');
 
 const DB_DIR  = path.join(__dirname, '../GuruTech/sessions');
-const DB_PATH = path.join(DB_DIR, 'panther.db');
+const DB_PATH = path.join(DB_DIR, 'benzo.db');
 if (!fs.existsSync(DB_DIR)) fs.mkdirSync(DB_DIR, { recursive: true });
 
 const db = new Database(DB_PATH);
