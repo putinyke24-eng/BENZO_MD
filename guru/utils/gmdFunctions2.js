@@ -1,7 +1,7 @@
 'use strict';
 // ╔══════════════════════════════════════════════════════════════╗
-//  🐾  BLACK PANTHER MD  —  gmdFunctions2.js  (Auto Features)
-//  👑  Owner : GuruTech  |  📞 +254105521300
+//  🔗 BENZO MD  —  gmdFunctions2.js  (Auto Features)
+//  👑  Owner : PUTINYTECH  |  📞 +254794703644
 //  🛡️  AntiLink · AntiSpam · AntiCall · AutoBio · AutoReact
 //  💬  ChatBot · Presence · AntiDelete · AntiEdit · AntiViewOnce
 //  📢  Channel button helper attached to every response
@@ -304,7 +304,7 @@ const BIO_TEMPLATES = [
     () => `🌟 Powered by GuruTech | ${new Date().toLocaleDateString('en-KE')}`,
     () => `🔥 ${config.BOT_NAME} is live! | +${config.OWNER_NUMBER}`,
     () => `💚 Serving users 24/7 | ${config.BOT_NAME} 🐾`,
-    () => `🐾 BLACK PANTHER MD | GuruTech 🚀`,
+    () => `🔗 BENZOMD | Putinytech 🚀`,
 ];
 
 async function PantherAutoBio(sock) {
@@ -330,7 +330,7 @@ async function PantherStatusHandler(sock, messages) {
                 logger.debug('STATUS', `Read status from ${msg.key.participant || msg.pushName}`);
             }
             if (config.AUTO_LIKE_STATUS) {
-                const emojis = ['❤️','🔥','💛','💚','💙','🥰','😍','👏','🌟'];
+                const emojis = ['💚','💙''];
                 await sock.sendMessage(msg.key.remoteJid, {
                     react: { text: pickRandom(emojis), key: msg.key },
                 }).catch(() => {});
@@ -360,7 +360,7 @@ async function PantherChatBot(sock, msg, settings) {
         await PantherPresence(sock, from, 'composing');
 
         const systemPrompt =
-            `You are ${config.BOT_NAME}, a helpful WhatsApp assistant by GuruTech (+${config.OWNER_NUMBER}). ` +
+            `You are ${config.BOT_NAME}, a helpful WhatsApp assistant by putinytech (+${config.OWNER_NUMBER}). ` +
             `Be friendly, concise and use relevant emojis. Never say you are ChatGPT or any other AI.`;
 
         const response = await axios.get(
