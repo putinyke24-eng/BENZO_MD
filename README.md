@@ -28,15 +28,15 @@
 
 ## 🚀 DEPLOYMENT
 
-#### ☁️ Heroku
+#### ☁️ KATABUM 
 
 
 
 #### 🐧 VPS / Termux
 
 ```bash
-git clone https://github.com/koyoteh/BLACK-PANTHER.git
-cd BLACK-PANTHER
+git clone https://github.com/putinyke24-eng/BENZO_MD.git
+cd BENZO_MD
 npm install --legacy-peer-deps
 npm start
 ```
