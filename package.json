@@ -1,7 +1,7 @@
 {
-  "name": "black-panther-md",
-  "version": "2.1.0",
-  "description": "BLACK PANTHER MD - A Powerful Multi-Device WhatsApp Bot by GuruTech",
+  "name": "Benzo-md",
+  "version": "3.1.0",
+  "description": "BENZO MD - A Powerful Multi-Device Meant For The Best By PutinyTech",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
@@ -10,18 +10,18 @@
   },
   "keywords": [
     "whatsapp-bot",
-    "gurutech",
-    "black-panther-md",
+    "putinytech",
+    "benzo-md",
     "baileys",
     "whatsapp-md"
   ],
-  "author": "GuruTech",
+  "author": "PutinyTech",
   "license": "MIT",
   "engines": {
     "node": "22.x"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
+    "@google/generative-ai": "^2.8.0",
     "@hapi/boom": "^10.0.1",
     "@iamtraction/google-translate": "^2.0.1",
     "@whiskeysockets/baileys": "^7.0.0-rc.9",
@@ -58,7 +58,7 @@
     "qrcode": "^1.5.4",
     "sharp": "^0.32.6",
     "wa-sticker-formatter": "^4.4.4",
-    "yt-search": "^2.13.1"
+    "yt-search": "^0.21.23"
   },
   "devDependencies": {
     "node-gyp": "^12.3.0",
@@ -66,6 +66,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/koyoteh/BLACK-PANTHER.git"
+    "url": "git+https://github.com/koyoteh/BENZO.git"
   }
 }
