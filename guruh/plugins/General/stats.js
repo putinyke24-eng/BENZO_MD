@@ -46,7 +46,7 @@ export default {
             const bName = botname || 'BLACK-PANTHER-MD';
 
             const cmdCount = Object.keys(commands).length;
-            const groupCount = global._toxicGroupMetaCache?.size ?? '?';
+            const groupCount = global._pantherGroupMetaCache?.size ?? '?';
 
             const sudoUsers = await getSudoUsers().catch(() => []);
             const bannedUsers = await getBannedUsers().catch(() => []);

@@ -95,7 +95,7 @@ export default {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             console.error('tesq error:', err?.message);
             await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
-            await sendInteractive(client, m, `╭─❏ 「 TOXIC AI」
+            await sendInteractive(client, m, `╭─❏ 「 AI ASSISTANT」
 │ ${msgText}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }

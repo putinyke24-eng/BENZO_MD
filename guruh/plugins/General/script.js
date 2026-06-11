@@ -10,7 +10,7 @@ export default {
     await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
 
     try {
-      const repoUrl = 'https://api.github.com/repos/xhclintohn/BLACK-PANTHER-MD';
+      const repoUrl = 'https://api.github.com/repos/koyoteh/BLACK-PANTHER';
       const response = await fetch(repoUrl);
       const repoData = await response.json();
 
@@ -31,7 +31,7 @@ export default {
       const lastUpdateDate = new Date(repoInfo.lastUpdate).toLocaleDateString('en-GB');
 
       const replyText = `╭─❏ 「 Repository」
-│ 🔗 GitHub:\n│ https://github.com/xhclintohn/BLACK-PANTHER-MD\n│ \n│ 🌐 Hosting:\n│ https://toxicx.tech\n│ \n│ ⭐ Stars : ${repoInfo.stars}\n│ 🍴 Forks : ${repoInfo.forks}\n│ 📅 Created : ${createdDate}\n│ 🔄 Last Update : ${lastUpdateDate}\n│ 👤 Owner : ${repoInfo.owner}\n╰───────────────\n> 🌐 Hosted by Toxic-Hosting\n> 🔗 hosting.toxicx.tech`;
+│ 🔗 GitHub:\n│ https://github.com/koyoteh/BLACK-PANTHER\n│ \n│ 🌐 Hosting:\n│ https://wa.me/254105521300\n│ \n│ ⭐ Stars : ${repoInfo.stars}\n│ 🍴 Forks : ${repoInfo.forks}\n│ 📅 Created : ${createdDate}\n│ 🔄 Last Update : ${lastUpdateDate}\n│ 👤 Owner : ${repoInfo.owner}\n╰───────────────\n> 🌐 Hosted by GuruTech Hosting\n> 🔗 hosting.wa.me/254105521300`;
 
       await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
 
@@ -39,14 +39,14 @@ export default {
         const msg = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
           interactiveMessage: {
             body: { text: replyText },
-            footer: { text: '🌐 hosting.toxicx.tech' },
+            footer: { text: '🌐 hosting.wa.me/254105521300' },
             header: { hasMediaAttachment: false },
             contextInfo: {
               externalAdReply: {
                 showAdAttribution: false,
                 title: `${botname}`,
-                body: `Hosted by Toxic-Hosting`,
-                sourceUrl: `https://toxicx.tech`,
+                body: `Hosted by GuruTech Hosting`,
+                sourceUrl: `https://wa.me/254105521300`,
                 mediaType: 1,
                 renderLargerThumbnail: true
               }
@@ -64,9 +64,9 @@ export default {
                 {
                   name: 'cta_url',
                   buttonParamsJson: JSON.stringify({
-                    display_text: 'Toxic-Hosting',
-                    url: 'https://toxicx.tech',
-                    merchant_url: 'https://toxicx.tech'
+                    display_text: 'GuruTech Hosting',
+                    url: 'https://wa.me/254105521300',
+                    merchant_url: 'https://wa.me/254105521300'
                   })
                 }
               ]
@@ -82,8 +82,8 @@ export default {
             externalAdReply: {
               showAdAttribution: false,
               title: `${botname}`,
-              body: `Hosted by Toxic-Hosting`,
-              sourceUrl: `https://toxicx.tech`,
+              body: `Hosted by GuruTech Hosting`,
+              sourceUrl: `https://wa.me/254105521300`,
               mediaType: 1,
               renderLargerThumbnail: true
             }
@@ -94,7 +94,7 @@ export default {
     } catch (error) {
       await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
       await sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Couldn't fetch repo data\n│ ${error.message}\n╰───────────────\n> 🌐 hosting.toxicx.tech`);
+│ Couldn't fetch repo data\n│ ${error.message}\n╰───────────────\n> 🌐 hosting.wa.me/254105521300`);
     }
   }
 };

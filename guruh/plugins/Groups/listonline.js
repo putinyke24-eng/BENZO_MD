@@ -35,7 +35,7 @@ export default {
 
             await new Promise(r => setTimeout(r, 5000));
 
-            const presenceMap = global._toxicPresenceMap || new Map();
+            const presenceMap = global._pantherPresenceMap || new Map();
             const onlineList = [];
             for (const jid of validJids) {
                 const data = presenceMap.get(jid);

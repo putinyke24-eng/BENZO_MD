@@ -46,7 +46,7 @@ export default [
                         '📋 .ngc <group name>',
                         '📌 Tag members to add them',
                         '',
-                        '  .ngc Toxic Squad @user',
+                        '  .ngc Panther Squad @user',
                         '  .newgc My Group',
                     ])
                 });

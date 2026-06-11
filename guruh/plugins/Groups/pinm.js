@@ -2,7 +2,7 @@ import { generateWAMessageFromContent } from '@whiskeysockets/baileys';
 import { getDeviceMode } from '../../lib/deviceMode.js';
 import { sendInteractive } from '../../lib/sendInteractive.js';
 
-if (!global._toxicPinPending) global._toxicPinPending = new Map();
+if (!global._pantherPinPending) global._pantherPinPending = new Map();
 
 const parseDuration = (input) => {
     const m = String(input).toLowerCase().match(/^(\d+)\s*(s|m|h|d)$/);
@@ -89,10 +89,10 @@ export default {
                 fromMe: m.quoted.fromMe || false,
                 participant: m.quoted.sender
             };
-            global._toxicPinPending.set(m.chat, { key: pendingKey, ts: Date.now() });
+            global._pantherPinPending.set(m.chat, { key: pendingKey, ts: Date.now() });
             setTimeout(() => {
-                const p = global._toxicPinPending.get(m.chat);
-                if (p && Date.now() - p.ts > 5 * 60 * 1000) global._toxicPinPending.delete(m.chat);
+                const p = global._pantherPinPending.get(m.chat);
+                if (p && Date.now() - p.ts > 5 * 60 * 1000) global._pantherPinPending.delete(m.chat);
             }, 5 * 60 * 1000);
 
             if (!time) {
@@ -101,7 +101,7 @@ export default {
             }
         }
 
-        const pending = global._toxicPinPending.get(m.chat);
+        const pending = global._pantherPinPending.get(m.chat);
         const messageKey = pending?.key || (m.quoted ? {
             remoteJid: m.chat,
             id: m.quoted.id,
@@ -119,7 +119,7 @@ export default {
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
         try {
             await client.sendMessage(m.chat, { pin: messageKey, type: 1, time: pinTime });
-            global._toxicPinPending.delete(m.chat);
+            global._pantherPinPending.delete(m.chat);
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             await sendInteractive(client, m, `│ \n│ 📌 Message pinned!\n│ Duration: ${durationLabel(pinTime)}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         } catch (error) {

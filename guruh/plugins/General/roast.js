@@ -1,4 +1,4 @@
-import { getAnime } from '../../lib/toxicApi.js';
+import { getAnime } from '../../lib/api.js';
 
 const ROASTS = [
     "Your WiFi password is probably 'password123'. Clown behaviour.",
@@ -25,7 +25,7 @@ const ROASTS = [
 
 export default {
     name: 'roast',
-    aliases: ['insult', 'savage', 'toxicroast', 'flame'],
+    aliases: ['insult', 'savage', 'brutalnroast', 'flame'],
     description: 'Roast someone (or yourself) with a savage line',
     run: async (context) => {
         const { client, m, prefix } = context;
