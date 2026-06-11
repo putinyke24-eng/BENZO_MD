@@ -10,22 +10,22 @@ const bool = (key, def = true) => {
 
 const config = {
     // ── Bot Identity ──────────────────────────────────
-    BOT_NAME:       process.env.BOT_NAME     || 'BLACK PANTHER MD',
-    OWNER_NAME:     process.env.OWNER_NAME   || 'GuruTech',
-    OWNER_NUMBER:   process.env.OWNER_NUMBER || '254105521300',
+    BOT_NAME:       process.env.BOT_NAME     || 'BENZO_MD',
+    OWNER_NAME:     process.env.OWNER_NAME   || 'PUTINY_🇷🇺KE',
+    OWNER_NUMBER:   process.env.OWNER_NUMBER || '254794703644',
     BOT_PREFIX:     process.env.BOT_PREFIX   || '.',
-    BOT_VERSION:    '1.0.0',
-    PACK_NAME:      process.env.BOT_NAME     || 'BLACK PANTHER MD',
-    PACK_AUTHOR:    process.env.OWNER_NAME   || 'GuruTech',
+    BOT_VERSION:    '5.0.0',
+    PACK_NAME:      process.env.BOT_NAME     || 'BENZO_MD',
+    PACK_AUTHOR:    process.env.OWNER_NAME   || 'PUTINY_🇷🇺KE',
 
-    // ── Channel (GuruTech WhatsApp Channel) ───────────
-    // https://whatsapp.com/channel/0029VbCl2UX3rZZilMSvxN1e
-    CHANNEL_URL:        process.env.CHANNEL_URL  || 'https://whatsapp.com/channel/0029VbCl2UX3rZZilMSvxN1e',
-    CHANNEL_NAME:       process.env.CHANNEL_NAME || 'BLACK PANTHER MD Channel',
+    // ── Channel (Benzotech WhatsApp Channel) ───────────
+    // 
+    CHANNEL_URL:        process.env.CHANNEL_URL  || '',
+    CHANNEL_NAME:       process.env.CHANNEL_NAME || 'BENZO MD Channel',
     // Newsletter JID for the green "Forwarded from <channel>" chip on every reply.
     // Format: <id>@newsletter   (e.g. 120363401548261516@newsletter)
     CHANNEL_JID:        process.env.CHANNEL_JID  || '120363427012090993@newsletter',
-    CHANNEL_NEWSLETTER_NAME: process.env.CHANNEL_NEWSLETTER_NAME || '🐾『 BLACK PANTHER MD 』🐾',
+    CHANNEL_NEWSLETTER_NAME: process.env.CHANNEL_NEWSLETTER_NAME || '🐾『 BENZO MD CHANNEL 』🐾',
 
     // ── Connection ────────────────────────────────────
     SESSION_ID:     process.env.SESSION_ID   || '',
@@ -60,7 +60,7 @@ const config = {
     STATUS_MSG:                 process.env.STATUS_MSG                 || '',
 
     // Custom react emojis (comma-separated)
-    CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || '🪾,🌴,🪻,🌿,🌲,🌵,🍂,☄️,🪽,🪶,🚀,🍖',
+    CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || '🩵,❤️,💙,🇷🇺',
 
     // ── Database ──────────────────────────────────────
     DATABASE_URL:   process.env.DATABASE_URL || null,
