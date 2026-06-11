@@ -12,7 +12,7 @@ export default {
       const { client, m, prefix } = context;
       await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
       await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
-      const bName = botname || 'Toxic-MD';
+      const bName = botname || 'BLACK-PANTHER-MD';
 
       const settings = await getSettings();
       const sudoUsers = await getSudoUsers();
@@ -120,7 +120,7 @@ export default {
         fmt(
           'Sticker Pack Name',
           'Sets the pack name shown on stickers created by the bot.',
-          settings.packname || 'Toxic-MD',
+          settings.packname || 'BLACK-PANTHER-MD',
           `${prefix}stickerwm <name>`,
           `${prefix}stickerwm MyPack`
         ) +
@@ -169,7 +169,7 @@ export default {
         `╭─❏ 「 Tips」\n` +
         `│ Only owner/sudo can change settings.\n` +
         `│ Settings save instantly to database.\n` +
-        `╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+        `╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
       await sendInteractive(client, m, message);
     });

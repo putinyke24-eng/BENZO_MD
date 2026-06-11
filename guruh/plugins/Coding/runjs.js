@@ -13,7 +13,7 @@ export default async (context) => {
     if (!code) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
         return sendInteractive(client, m, `╭─❏ 「 JS COMPILER」
-│ Provide JavaScript code or quote one.\n│ Example: .runjs console.log("hello")\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Provide JavaScript code or quote one.\n│ Example: .runjs console.log("hello")\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 
     try {
@@ -24,12 +24,12 @@ export default async (context) => {
         let error = result.stderr ? `│ stderr: ${result.stderr}\n` : '';
         
         sendInteractive(client, m, `╭─❏ 「 JS OUTPUT」
-│ ${output}\n${error}╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${output}\n${error}╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         
     } catch (err) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
         console.log(err);
         sendInteractive(client, m, `╭─❏ 「 JS ERROR」
-│ ${err.stderr || err.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${err.stderr || err.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 };

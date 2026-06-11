@@ -6,7 +6,7 @@ export default async (context) => {
     try {
         if (!text) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, "╭─❏ 「 APK」\n│ Provide an app name, you brainless creature!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧");
+            return sendInteractive(client, m, "╭─❏ 「 APK」\n│ Provide an app name, you brainless creature!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇");
         }
 
         await client.sendMessage(m.chat, { react: { text: "⌛", key: m.reactKey } });
@@ -16,7 +16,7 @@ export default async (context) => {
         if (!data?.datalist?.list?.length) {
             await client.sendMessage(m.chat, { react: { text: "❌", key: m.reactKey } });
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, "╭─❏ 「 APK」\n│ App not found!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧");
+            return sendInteractive(client, m, "╭─❏ 「 APK」\n│ App not found!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇");
         }
 
         const app = data.datalist.list[0];
@@ -25,7 +25,7 @@ export default async (context) => {
         if (!apkUrl) {
             await client.sendMessage(m.chat, { react: { text: "❌", key: m.reactKey } });
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, "╭─❏ 「 APK」\n│ APK download link not available!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧");
+            return sendInteractive(client, m, "╭─❏ 「 APK」\n│ APK download link not available!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇");
         }
 
         await client.sendMessage(
@@ -42,6 +42,6 @@ export default async (context) => {
     } catch (error) {
         await client.sendMessage(m.chat, { react: { text: "❌", key: m.reactKey } });
         sendInteractive(client, m, `╭─❏ 「 APK ERROR」
-│ APK download failed, not my problem.\n│ ` + error + "\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧");
+│ APK download failed, not my problem.\n│ ` + error + "\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇");
     }
 };

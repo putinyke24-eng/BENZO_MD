@@ -8,11 +8,11 @@ export default async (context) => {
 
         if (!m.isGroup) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `╭─❏ 「 XKILL」\n│ This command is meant for groups.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `╭─❏ 「 XKILL」\n│ This command is meant for groups.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
         if (!isBotAdmin) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `╭─❏ 「 XKILL」\n│ I need admin privileges.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `╭─❏ 「 XKILL」\n│ I need admin privileges.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const normalizeJid = (jid) => {
@@ -48,7 +48,7 @@ export default async (context) => {
 
         await client.sendMessage(m.chat, { react: { text: '⚠️', key: m.reactKey } });
         await sendInteractive(client, m, `╭─❏ 「 TERMINATION」
-│ GROUP TERMINATION INITIATED\n│ Removing ${usersToKick.length} participants.\n│ The group will be renamed.\n│ THIS PROCESS CANNOT BE STOPPED.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ GROUP TERMINATION INITIATED\n│ Removing ${usersToKick.length} participants.\n│ The group will be renamed.\n│ THIS PROCESS CANNOT BE STOPPED.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
 
         try { await client.groupUpdateSubject(m.chat, "Proven Useless🦄🚮"); } catch (e) {}
         try { await client.groupUpdateDescription(m.chat, "Terminated by Tσxιƈ-ɱԃȥ\n\nA collection of digital disappointments. Your contributions were as valuable as your existence—negligible."); } catch (e) {}
@@ -65,6 +65,6 @@ export default async (context) => {
 
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
         await sendInteractive(client, m, `╭─❏ 「 COMPLETE」
-│ TERMINATION COMPLETE\n│ All participants removed.\n│ Group secured.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ TERMINATION COMPLETE\n│ All participants removed.\n│ Group secured.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     });
 };

@@ -20,22 +20,22 @@ export default async (context) => {
   if (text) {
     await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
     return client.sendMessage(m.chat, { text: `╭─❏ 「 Eʀʀᴏʀ」
-│ Yo, @${m.sender.split('@')[0].split(':')[0]}, what's with the extra\n│ bullshit? Just say ${prefix}credits, you moron.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧` }, { mentions: [m.sender] });
+│ Yo, @${m.sender.split('@')[0].split(':')[0]}, what's with the extra\n│ bullshit? Just say ${prefix}credits, you moron.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇` }, { mentions: [m.sender] });
   }
 
   try {
     const replyText = `╭─❏ 「 Cʀᴇᴅɪᴛs」
-│ All hail *𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧*, the badass who\n│ built this bot from the ground up.\n│ Nobody else gets credit—fuck 'em.\n│ This is my empire, and I run this\n│ shit solo.\n│ \n│ Bow down to *𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧*\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+│ All hail *𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧*, the badass who\n│ built this bot from the ground up.\n│ Nobody else gets credit—fuck 'em.\n│ This is my empire, and I run this\n│ shit solo.\n│ \n│ Bow down to *𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧*\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
     await client.sendMessage(m.chat, {
       text: replyText,
-      footer: `©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`,
+      footer: `©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`,
       viewOnce: true
     });
   } catch (error) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
     console.error('Error in credits command:', error);
     await sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Shit went sideways, can't show credits.\n│ Try again later, loser.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Shit went sideways, can't show credits.\n│ Try again later, loser.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
   }
 };

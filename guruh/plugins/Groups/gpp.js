@@ -3,7 +3,7 @@ import ownerMiddleware from '../../utils/botUtil/Ownermiddleware.js';
 import { sendInteractive } from '../../lib/sendInteractive.js';
 
 const formatStylishReply = (message) => {
-    return `│ \n│ ${message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+    return `│ \n│ ${message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 };
 
 export default async (context) => {

@@ -103,7 +103,7 @@ export default {
       menuText += `╰───────────────\n\n`;
     }
 
-    menuText += `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+    menuText += `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
     await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
     await client.sendMessage(m.chat, {
@@ -139,7 +139,7 @@ ${iosCategoryText}\n╰───────────────\n> 🌐 Hos
       const interactiveMsg = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
         interactiveMessage: {
           body: { text: 'Browse Categories' },
-          footer: { text: '©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧' },
+          footer: { text: '©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇' },
           header: { hasMediaAttachment: false },
           nativeFlowMessage: {
             messageVersion: 1,

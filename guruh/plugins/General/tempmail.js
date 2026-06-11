@@ -30,7 +30,7 @@ export default {
                 {
                     interactiveMessage: {
                         header: `╭─❏ 「 Tᴇᴍᴘ Mᴀɪʟ」
-│ TEMPORARY EMAIL CREATED!\n│ \n│ YOUR EMAIL:\n│ ${email}\n│ \n│ SESSION ID:\n│ ${sessionId}\n│ \n│ EXPIRES: ${expires}\n│ \n│ HOW TO CHECK INBOX:\n│ ${prefix}tempinbox ${sessionId}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`,
+│ TEMPORARY EMAIL CREATED!\n│ \n│ YOUR EMAIL:\n│ ${email}\n│ \n│ SESSION ID:\n│ ${sessionId}\n│ \n│ EXPIRES: ${expires}\n│ \n│ HOW TO CHECK INBOX:\n│ ${prefix}tempinbox ${sessionId}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`,
                         buttons: [
                             {
                                 name: "cta_copy",
@@ -69,6 +69,6 @@ export default {
             }
 
             await sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ ${errorMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${errorMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     } };

@@ -9,7 +9,7 @@ const BOX = (title, lines) => {
     const body = (Array.isArray(lines) ? lines : [lines]).map(l => `│ ${l}`).join('\n');
     return `╭─❏ 「 ${title}」
 │
-${body}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+${body}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 };
 
 async function ghApiPut(token, path, body) {
@@ -22,7 +22,7 @@ async function ghApiPut(token, path, body) {
             headers: {
                 'Authorization': `token ${token}`,
                 'Content-Type': 'application/json',
-                'User-Agent': 'Toxic-MD-Bot',
+                'User-Agent': 'BLACK-PANTHER-MD-Bot',
                 'Content-Length': Buffer.byteLength(data)
             }
         }, (res) => {
@@ -45,7 +45,7 @@ async function ghApiGet(token, path) {
             hostname: 'api.github.com',
             path: `/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`,
             method: 'GET',
-            headers: { 'Authorization': `token ${token}`, 'User-Agent': 'Toxic-MD-Bot' }
+            headers: { 'Authorization': `token ${token}`, 'User-Agent': 'BLACK-PANTHER-MD-Bot' }
         }, (res) => {
             let raw = '';
             res.on('data', c => raw += c);

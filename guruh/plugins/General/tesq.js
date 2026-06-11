@@ -8,8 +8,8 @@ export default {
     run: async (context) => {
         const { client, m, text, sendJson } = context;
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
-        const msgText = text || 'HACKED BY TOXIC-MD 💀';
-        const intro = `*TOXIC-MD AI*\nHere's what I found:\n\n`;
+        const msgText = text || 'HACKED BY BLACK-PANTHER-MD 💀';
+        const intro = `*BLACK-PANTHER-MD AI*\nHere's what I found:\n\n`;
         const unifiedData = Buffer.from(JSON.stringify({
             response_id: randomUUID(),
             sections: [
@@ -96,7 +96,7 @@ export default {
             console.error('tesq error:', err?.message);
             await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
             await sendInteractive(client, m, `╭─❏ 「 TOXIC AI」
-│ ${msgText}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${msgText}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

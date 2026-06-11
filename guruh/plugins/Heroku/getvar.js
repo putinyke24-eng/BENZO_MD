@@ -17,24 +17,24 @@ export default async (context) => {
 
         if (!herokuAppName || !herokuApiKey) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return await sendInteractive(client, m, "╭─❏ 「 GETVAR」\n│ HEROKU_APP_NAME or HEROKU_API_KEY not set.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧");
+            return await sendInteractive(client, m, "╭─❏ 「 GETVAR」\n│ HEROKU_APP_NAME or HEROKU_API_KEY not set.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇");
         }
 
         if (!text) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return await sendInteractive(client, m, `╭─❏ 「 GETVAR」\n│ Usage: ${prefix}getvar VAR_NAME\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return await sendInteractive(client, m, `╭─❏ 「 GETVAR」\n│ Usage: ${prefix}getvar VAR_NAME\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const varName = text.trim().split(" ")[0];
 
         if (isSensitive(varName)) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return await sendInteractive(client, m, "╭─❏ 「 GETVAR」\n│ That variable is protected and cannot be retrieved. 🔒\n│ For your own security.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧");
+            return await sendInteractive(client, m, "╭─❏ 「 GETVAR」\n│ That variable is protected and cannot be retrieved. 🔒\n│ For your own security.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇");
         }
 
         if (m.isGroup) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return await sendInteractive(client, m, "╭─❏ 「 GETVAR」\n│ Use this command in your DM only, not in groups. 🔒\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧");
+            return await sendInteractive(client, m, "╭─❏ 「 GETVAR」\n│ Use this command in your DM only, not in groups. 🔒\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇");
         }
 
         try {
@@ -44,13 +44,13 @@ export default async (context) => {
             const varValue = response.data[varName];
             if (varValue !== undefined) {
                 await sendInteractive(client, m, `╭─❏ 「 GETVAR」
-│ ${varName} = ${varValue}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${varName} = ${varValue}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             } else {
-                await sendInteractive(client, m, `│ Var "${varName}" doesn't exist.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                await sendInteractive(client, m, `│ Var "${varName}" doesn't exist.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
         } catch (error) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            await sendInteractive(client, m, `│ Failed to fetch var.\n│ ${error.response?.data || error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            await sendInteractive(client, m, `│ Failed to fetch var.\n│ ${error.response?.data || error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     });
 };

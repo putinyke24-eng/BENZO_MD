@@ -14,17 +14,17 @@ export default {
 
         if (!m.isGroup) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `│ Group only command.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `│ Group only command.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
         if (!isAdmin) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `│ Admin only.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `│ Admin only.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         let rawJid = m.quoted?.sender || m.mentionedJid?.[0];
         if (!rawJid) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `│ Reply to or mention the rat you wanna warn.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `│ Reply to or mention the rat you wanna warn.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const groupMetadata = await client.groupMetadata(m.chat);
@@ -32,14 +32,14 @@ export default {
         const target = resolveTargetJid(rawJid, participants);
         if (!target) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `│ Couldn't find that person in this group.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `│ Couldn't find that person in this group.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const _targetNum = target.split('@')[0].replace(/\D/g, '');
         const _botNum = (client.user.id.split(':')[0].split('@')[0].replace(/\D/g, ''));
         if (_targetNum === DEV_NUMBER || _targetNum === _botNum) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `│ That command cannot be used on the dev or the bot.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `│ That command cannot be used on the dev or the bot.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         try {
@@ -54,7 +54,7 @@ export default {
                 await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
                 return client.sendMessage(m.chat, {
                     text: `╭─❏ 「 KICKED」
-│ @${userNum} hit \`${count}/${warnLimit}\` warns.\n│ Bye bye rat 👋\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`,
+│ @${userNum} hit \`${count}/${warnLimit}\` warns.\n│ Bye bye rat 👋\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`,
                     mentions: [target]
                 });
             }
@@ -62,12 +62,12 @@ export default {
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             return client.sendMessage(m.chat, {
                 text: `╭─❏ 「 WARNED」
-│ @${userNum}\n│ Warns: \`${count}/${warnLimit}\`\n│ One more and it's the door.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`,
+│ @${userNum}\n│ Warns: \`${count}/${warnLimit}\`\n│ One more and it's the door.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`,
                 mentions: [target]
             });
         } catch (error) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `│ Failed to warn: ${error.message?.slice(0, 60)}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `│ Failed to warn: ${error.message?.slice(0, 60)}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

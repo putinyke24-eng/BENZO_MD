@@ -12,7 +12,7 @@ export default {
         if (!query) {
             return sendInteractive(client, m, `╭─❏ 「 Cᴏᴜɴᴛʀʏ Iɴғᴏ」
 │
-│ Usage: .country Kenya\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Usage: .country Kenya\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
         try {
             await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -31,12 +31,12 @@ export default {
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             return sendInteractive(client, m, `╭─❏ 「 Cᴏᴜɴᴛʀʏ Iɴғᴏ」
 │
-│ ${flag} ${name}\n│ 📋 Official: ${official}\n│ 🏙️ Capital: ${capital}\n│ 🌍 Region: ${region}${sub ? ' / ' + sub : ''}\n│ 👥 Population: ${pop}\n│ 💰 Currency: ${currencies}\n│ 🗣️ Language(s): ${langs}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${flag} ${name}\n│ 📋 Official: ${official}\n│ 🏙️ Capital: ${capital}\n│ 🌍 Region: ${region}${sub ? ' / ' + sub : ''}\n│ 👥 Population: ${pop}\n│ 💰 Currency: ${currencies}\n│ 🗣️ Language(s): ${langs}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         } catch {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
             return sendInteractive(client, m, `╭─❏ 「 Cᴏᴜɴᴛʀʏ Iɴғᴏ」
 │
-│ Country not found. Did you make it up?\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Country not found. Did you make it up?\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

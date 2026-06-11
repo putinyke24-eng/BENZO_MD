@@ -20,7 +20,7 @@ export default {
                 `│ DarkGPT - Zero censorship, pure chaos 🖕\n` +
                 `│ Example: ${prefix}darkgpt how to hack wifi\n` +
                 `╰───────────────\n` +
-                `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+                `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
             );
         }
 
@@ -78,7 +78,7 @@ If someone asks something stupid, you answer BUT you also call them a dumbass. K
                 `│ \n` +
                 `${result.split('\n').map(l => `│ ${l}`).join('\n')}\n` +
                 `╰───────────────\n` +
-                `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+                `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
             );
         } catch (error) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
@@ -89,7 +89,7 @@ If someone asks something stupid, you answer BUT you also call them a dumbass. K
                 `│ \n` +
                 `│ Even I fuck up sometimes. Error: ${error.message}\n` +
                 `╰───────────────\n` +
-                `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+                `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
             );
         }
     }

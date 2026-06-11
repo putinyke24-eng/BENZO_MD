@@ -14,13 +14,13 @@ export default {
         if (afkFeature.isAfk(senderNum)) {
             afkFeature.removeAfk(senderNum);
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `│ AFK removed. Welcome back, ghost. 👁️\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `│ AFK removed. Welcome back, ghost. 👁️\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         afkFeature.setAfk(senderNum, reason);
         return client.sendMessage(m.chat, {
             text: `╭─❏ 「 AFK SET」
-│ @${senderNum} went AFK.\n│ Reason: ${reason}\n│ Don't bother them. 🚫\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`,
+│ @${senderNum} went AFK.\n│ Reason: ${reason}\n│ Don't bother them. 🚫\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`,
             mentions: [m.sender]
         });
     }

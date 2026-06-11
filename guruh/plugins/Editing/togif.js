@@ -16,14 +16,14 @@ export default async (context) => {
         if (!text) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             return sendInteractive(client, m, `╭─❏ 「 EMOJI ART」
-│ Give me an emoji!\n│ Example: .togif 😂\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Give me an emoji!\n│ Example: .togif 😂\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const emojiMatch = text.match(/\p{Emoji}/u);
         if (!emojiMatch) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             return sendInteractive(client, m, `╭─❏ 「 EMOJI ART」
-│ That's not an emoji. Give me a real one.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ That's not an emoji. Give me a real one.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -40,13 +40,13 @@ export default async (context) => {
         await client.sendMessage(m.chat, {
             image: buffer,
             caption: `╭─❏ 「 EMOJI ART」
-│ ${emoji}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+│ ${emoji}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
         });
 
     } catch (error) {
         console.error("togif command error:", error);
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
         await sendInteractive(client, m, `╭─❏ 「 ERROR」
-│ Failed to fetch emoji art:\n│ ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Failed to fetch emoji art:\n│ ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 };

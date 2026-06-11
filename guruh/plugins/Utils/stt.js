@@ -21,7 +21,7 @@ export default {
         if (!_groqKeys.length) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             return sendInteractive(client, m, `╭─❏ 「 STT」
-│ No GROQ key set. Add GROQ_KEY_1 to env vars.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ No GROQ key set. Add GROQ_KEY_1 to env vars.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
         let GROQ_API_KEY = _km.getNextGroqKey?.() || _groqKeys[0];
 
@@ -33,7 +33,7 @@ export default {
         if (!audioMsg) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
             return sendInteractive(client, m, `╭─❏ 「 STT」
-│ Reply to a voice note or audio message,\n│ you muppet. I'm not magic — I can't\n│ transcribe thin air.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Reply to a voice note or audio message,\n│ you muppet. I'm not magic — I can't\n│ transcribe thin air.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         await client.sendMessage(m.chat, { react: { text: '👂', key: m.reactKey } });
@@ -77,18 +77,18 @@ export default {
             if (!transcribed) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
                 return sendInteractive(client, m, `╭─❏ 「 STT」
-│ I listened to that rubbish and got\n│ absolutely nothing. Either you mumbled\n│ or you sent silence. Both are equally\n│ useless.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ I listened to that rubbish and got\n│ absolutely nothing. Either you mumbled\n│ or you sent silence. Both are equally\n│ useless.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
 
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             await sendInteractive(client, m, `╭─❏ 「 STT」
-│ 👂 *Transcription:*\n│ \n│ ${transcribed}\n│ \n│ _You're welcome. Now learn to type\n│ next time._\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ 👂 *Transcription:*\n│ \n│ ${transcribed}\n│ \n│ _You're welcome. Now learn to type\n│ next time._\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
 
         } catch (error) {
             console.error('STT error:', error);
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
             await sendInteractive(client, m, `╭─❏ 「 STT」
-│ Transcription crashed. Whisper took one\n│ listen and gave up — honestly can't\n│ blame it.\n│ \n│ Error: ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Transcription crashed. Whisper took one\n│ listen and gave up — honestly can't\n│ blame it.\n│ \n│ Error: ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         } finally {
             fsPromises.unlink(tmpFile).catch(() => {});
         }

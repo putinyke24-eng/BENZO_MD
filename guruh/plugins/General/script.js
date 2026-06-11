@@ -4,13 +4,13 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
 export default {
   name: 'script',
   aliases: ['repo', 'source', 'github', 'git', 'gh', 'src', 'code', 'sourcecode'],
-  description: 'Show GitHub repository info for Toxic-MD',
+  description: 'Show GitHub repository info for BLACK-PANTHER-MD',
   run: async (context) => {
     const { client, m, botname, prefix = '' } = context;
     await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
 
     try {
-      const repoUrl = 'https://api.github.com/repos/xhclintohn/Toxic-MD';
+      const repoUrl = 'https://api.github.com/repos/xhclintohn/BLACK-PANTHER-MD';
       const response = await fetch(repoUrl);
       const repoData = await response.json();
 
@@ -31,7 +31,7 @@ export default {
       const lastUpdateDate = new Date(repoInfo.lastUpdate).toLocaleDateString('en-GB');
 
       const replyText = `╭─❏ 「 Repository」
-│ 🔗 GitHub:\n│ https://github.com/xhclintohn/Toxic-MD\n│ \n│ 🌐 Hosting:\n│ https://toxicx.tech\n│ \n│ ⭐ Stars : ${repoInfo.stars}\n│ 🍴 Forks : ${repoInfo.forks}\n│ 📅 Created : ${createdDate}\n│ 🔄 Last Update : ${lastUpdateDate}\n│ 👤 Owner : ${repoInfo.owner}\n╰───────────────\n> 🌐 Hosted by Toxic-Hosting\n> 🔗 hosting.toxicx.tech`;
+│ 🔗 GitHub:\n│ https://github.com/xhclintohn/BLACK-PANTHER-MD\n│ \n│ 🌐 Hosting:\n│ https://toxicx.tech\n│ \n│ ⭐ Stars : ${repoInfo.stars}\n│ 🍴 Forks : ${repoInfo.forks}\n│ 📅 Created : ${createdDate}\n│ 🔄 Last Update : ${lastUpdateDate}\n│ 👤 Owner : ${repoInfo.owner}\n╰───────────────\n> 🌐 Hosted by Toxic-Hosting\n> 🔗 hosting.toxicx.tech`;
 
       await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
 

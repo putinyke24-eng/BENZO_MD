@@ -6,7 +6,7 @@ export default async (context) => {
 
 
   let cap = `╭─❏ 「 CARBON」
-│ Converted By ${botname}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+│ Converted By ${botname}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
   if (m.quoted && m.quoted.text) {
     const forq = m.quoted.text;
@@ -23,7 +23,7 @@ export default async (context) => {
       if (!response.ok) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
           return sendInteractive(client, m, `╭─❏ 「 ERROR」
-│ API failed to fetch a valid response.\n│ Try again later, genius.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`)
+│ API failed to fetch a valid response.\n│ Try again later, genius.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`)
       }
 
       let per = await response.buffer();
@@ -32,10 +32,10 @@ export default async (context) => {
     } catch (error) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
       sendInteractive(client, m, `╭─❏ 「 ERROR」
-│ An error occured, you broke it.\n│ ${error}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`)
+│ An error occured, you broke it.\n│ ${error}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`)
     }
   } else {
     sendInteractive(client, m, `╭─❏ 「 CARBON」
-│ Quote a code message, idiot.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Quote a code message, idiot.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
   }
 }

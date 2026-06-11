@@ -6,7 +6,7 @@ export default async (context) => {
 
     if (!m.quoted) {
         return await sendInteractive(client, m, `╭─❏ 「 RETRIEVE」
-│ Reply to a view-once message, genius. 🙄\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Reply to a view-once message, genius. 🙄\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 
     try {
@@ -22,11 +22,11 @@ export default async (context) => {
             const buffer = await m.quoted.download();
             if (!buffer || buffer.length === 0) {
                 return await sendInteractive(client, m, `╭─❏ 「 RETRIEVE」
-│ Couldn't download it. WhatsApp already nuked it. 😤\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Couldn't download it. WhatsApp already nuked it. 😤\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
             const senderNum = (m.quoted?.sender || '').split('@')[0].split(':')[0] || 'Unknown';
             const caption = `╭─❏ 「 VIEW ONCE RETRIEVED」
-│ 👁 Sender: @${senderNum}\n│ 📍 Chat: ${m.isGroup ? 'Group' : 'DM'}\n│ \n│ You sneaky little thing. 😈\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+│ 👁 Sender: @${senderNum}\n│ 📍 Chat: ${m.isGroup ? 'Group' : 'DM'}\n│ \n│ You sneaky little thing. 😈\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
             const mentions = m.quoted?.sender ? [m.quoted.sender] : [];
             if (isImage) {
                 await client.sendMessage(dest, { image: buffer, caption, mentions });
@@ -61,7 +61,7 @@ export default async (context) => {
 
         if (!imageMsg && !videoMsg && !audioMsg) {
             return await sendInteractive(client, m, `╭─❏ 「 RETRIEVE」
-│ That's not a view-once. Stop wasting my time. 😒\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ That's not a view-once. Stop wasting my time. 😒\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const mediaMsg = imageMsg || videoMsg || audioMsg;
@@ -69,12 +69,12 @@ export default async (context) => {
 
         if (!buffer || buffer.length === 0) {
             return await sendInteractive(client, m, `╭─❏ 「 RETRIEVE」
-│ Couldn't download it. WhatsApp already nuked it. 😤\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Couldn't download it. WhatsApp already nuked it. 😤\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const senderNum = (m.quoted?.sender || ctx.participant || '').split('@')[0].split(':')[0] || 'Unknown';
         const caption = `╭─❏ 「 VIEW ONCE RETRIEVED」
-│ 👁 Sender: @${senderNum}\n│ 📍 Chat: ${m.isGroup ? 'Group' : 'DM'}\n│ \n│ You sneaky little thing. 😈\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+│ 👁 Sender: @${senderNum}\n│ 📍 Chat: ${m.isGroup ? 'Group' : 'DM'}\n│ \n│ You sneaky little thing. 😈\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
         const mentions = ctx.participant ? [ctx.participant] : [];
 
         if (imageMsg) {
@@ -91,6 +91,6 @@ export default async (context) => {
     } catch (e) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
         await sendInteractive(client, m, `╭─❏ 「 RETRIEVE」
-│ Something broke. WhatsApp's fault, not mine. 😤\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Something broke. WhatsApp's fault, not mine. 😤\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 };

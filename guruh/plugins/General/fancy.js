@@ -70,7 +70,7 @@ export default {
       const example = 'Toxic';
       let preview = `╭─❏ 「 Fᴀɴᴄʏ Tᴇxᴛ」
 │
-│ Usage: ${prefix}fancy <number> <text>\n│ Example: ${prefix}fancy 1 Toxic-MD\n│
+│ Usage: ${prefix}fancy <number> <text>\n│ Example: ${prefix}fancy 1 BLACK-PANTHER-MD\n│
 │ Available styles (1-${totalStyles}):\n`;
       for (let i = 0; i < totalStyles; i++) {
         const styled = applyStyle(example, i);
@@ -87,7 +87,7 @@ export default {
     if (isNaN(styleNum) || styleNum < 1 || styleNum > totalStyles) {
       return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
 │
-│ Invalid style number!\n│ Use 1-${totalStyles}\n│ Example: ${prefix}fancy 1 Toxic-MD\n╰───────────────`);
+│ Invalid style number!\n│ Use 1-${totalStyles}\n│ Example: ${prefix}fancy 1 BLACK-PANTHER-MD\n╰───────────────`);
     }
 
     const inputText = args.slice(1).join(' ');
@@ -106,7 +106,7 @@ export default {
         {
           interactiveMessage: {
             body: { text: styledText },
-            footer: { text: '©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧' },
+            footer: { text: '©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇' },
             nativeFlowMessage: {
               messageVersion: 1,
               buttons: [{

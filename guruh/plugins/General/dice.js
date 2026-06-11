@@ -14,6 +14,6 @@ export default {
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
         return sendInteractive(client, m, `╭─❏ 「 Dɪᴄᴇ Rᴏʟʟ」
 │
-│ 🎲 ${diceDisplay}\n│ 🔢 Rolls: [${rolls.join(', ')}]\n│ ➕ Total: ${total}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ 🎲 ${diceDisplay}\n│ 🔢 Rolls: [${rolls.join(', ')}]\n│ ➕ Total: ${total}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 };

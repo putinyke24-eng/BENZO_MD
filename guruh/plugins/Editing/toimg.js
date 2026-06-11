@@ -19,18 +19,18 @@ export default {
             if (!m.quoted) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
                 return sendInteractive(client, m, `╭─❏ 「 TO IMAGE」
-│ Are you illiterate? QUOTE A STICKER.\n│ The command is not a suggestion.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Are you illiterate? QUOTE A STICKER.\n│ The command is not a suggestion.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
             
             const quotedMime = m.quoted.mimetype || '';
             if (!/webp/.test(quotedMime)) return sendInteractive(client, m, `╭─❏ 「 TO IMAGE」
-│ That is not a sticker. Do you need\n│ glasses? That is clearly not a .webp file.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ That is not a sticker. Do you need\n│ glasses? That is clearly not a .webp file.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             
             mediaPath = await m.quoted.download();
             if (!mediaPath) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
                 return sendInteractive(client, m, `╭─❏ 「 FAILED」
-│ Failed to download the sticker.\n│ Your phone is probably as useless\n│ as you are.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Failed to download the sticker.\n│ Your phone is probably as useless\n│ as you are.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
             
             const tempFile = path.join(tmpdir(), `sticker_${Date.now()}.webp`);
@@ -52,7 +52,7 @@ export default {
             await client.sendMessage(m.chat, { 
                 image: imageBuffer, 
                 caption: `╭─❏ 「 TO IMAGE」
-│ Your sticker is now an image.\n│ A miraculous achievement.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧` 
+│ Your sticker is now an image.\n│ A miraculous achievement.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇` 
             });
             
             await client.sendMessage(m.chat, { 
@@ -60,7 +60,7 @@ export default {
                 mimetype: 'image/png', 
                 fileName: `sticker_${Date.now()}.png`, 
                 caption: `╭─❏ 「 PNG FILE」
-│ PNG version. Slightly less terrible.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧` 
+│ PNG version. Slightly less terrible.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇` 
             });
             
             try {
@@ -77,7 +77,7 @@ export default {
             if (err.message.includes('Network Error')) userMessage = 'Network error. Is your router powered by hopes and dreams?';
             
             await sendInteractive(client, m, `╭─❏ 「 FAILED」
-│ ${userMessage}\n│ Error: ${err.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${userMessage}\n│ Error: ${err.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             
             try {
                 if (mediaPath) fs.unlinkSync(mediaPath);

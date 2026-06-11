@@ -6,7 +6,7 @@ export default async (context) => {
 
   const formatStylishReply = (message) => {
     return `│ ${message}\n╰───────────────
-> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
   };
 
   if (!text) {
@@ -43,8 +43,8 @@ export default async (context) => {
                   (thumbnail ? `│🖼 *Thumbnail*: ${thumbnail}\n` : '') +
                   `│🔗 *Video*: ${videoUrl}\n` +
                   `╰───────────────
-> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧\n` +
-                  `Powered by Toxic-MD`;
+> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇\n` +
+                  `Powered by BLACK-PANTHER-MD`;
 
   await sendInteractive(client, m, formatStylishReply(response));
 };

@@ -12,7 +12,7 @@ export default async (context) => {
   if (!/audio|video/.test(mime)) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
     return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Send or reply to an audio/video file with the caption _transcribe_ idiot\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Send or reply to an audio/video file with the caption _transcribe_ idiot\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
   }
 
   await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -23,7 +23,7 @@ export default async (context) => {
     if (buffer.length > 5 * 1024 * 1024) {
       await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
       return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Maximum file size is 5 MB.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Maximum file size is 5 MB.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 
     const result = await transcribeWithTalknotes(buffer);
@@ -31,17 +31,17 @@ export default async (context) => {
     if (!result || !result.text) {
       await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
       return sendInteractive(client, m, `╭─❏ 「 Fᴀɪʟᴇᴅ」
-│ Failed to extract text. Please try again later.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Failed to extract text. Please try again later.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 
     await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
     return sendInteractive(client, m, `╭─❏ 「 Tʀᴀɴsᴄʀɪᴘᴛɪᴏɴ」
-│ ${result.text}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${result.text}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
   } catch (error) {
     console.error(error);
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
     sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ An error occurred while processing the file.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ An error occurred while processing the file.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
   }
 };
 

@@ -6,7 +6,7 @@ export default async (context) => {
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
 
 let cap = `╭─❏ 「 TRASH」
-│ Converted By ${botname}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+│ Converted By ${botname}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
 try {
 
@@ -33,7 +33,7 @@ try {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
 
 sendInteractive(client, m, `╭─❏ 「 ERROR」
-│ Something wrong occured.\n│ Try again, loser.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`)
+│ Something wrong occured.\n│ Try again, loser.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`)
 
 }
     }

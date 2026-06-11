@@ -14,7 +14,7 @@ export default {
             if (!query) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
                 return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Provide a package name,\n│ you incompetent fool.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Provide a package name,\n│ you incompetent fool.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
 
             await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -27,7 +27,7 @@ export default {
                 if (!Array.isArray(list) || list.length === 0) {
                     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
                     return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ No packages found in scope *${query}*\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ No packages found in scope *${query}*\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
                 }
                 
                 query = list[0]?.name || list[0]?.package?.name || query;
@@ -54,14 +54,14 @@ export default {
                 fileName: fileName,
                 mimetype: 'application/gzip',
                 caption: `╭─❏ 「 NPM」
-│ ${query} v${latest}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+│ ${query} v${latest}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
             });
 
         } catch (error) {
             console.error('NPM download error:', error);
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
             await sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Download failed.\n│ Error: ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Download failed.\n│ Error: ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

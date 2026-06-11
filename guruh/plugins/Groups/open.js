@@ -15,12 +15,12 @@ export default async (context) => {
                 try {
                     await client.groupSettingUpdate(m.chat, 'not_announcement');
                     await sendInteractive(client, m, `╭─❏ 「 OPENED」
-│ ⏰ Scheduled open executed!\n│ Group is now open.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ⏰ Scheduled open executed!\n│ Group is now open.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
                 } catch {}
             });
             await client.sendMessage(m.chat, { react: { text: '⏰', key: m.reactKey } });
             return m.reply(`╭─❏ 「 TIMER SET」
-│ ⏰ Group will open in *${label}*.\n│ Use .open to cancel & open now.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ⏰ Group will open in *${label}*.\n│ Use .open to cancel & open now.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         try {
@@ -28,10 +28,10 @@ export default async (context) => {
             await client.groupSettingUpdate(m.chat, 'not_announcement');
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             m.reply(`╭─❏ 「 OPENED」
-│ Group opened. Talk your trash.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Group opened. Talk your trash.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         } catch (e) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            m.reply(`│ Failed to open group: ${e.message?.slice(0, 60)}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            m.reply(`│ Failed to open group: ${e.message?.slice(0, 60)}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     });
 };

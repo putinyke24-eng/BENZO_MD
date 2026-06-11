@@ -16,7 +16,7 @@ export default {
         if (!text) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
             return sendInteractive(client, m, `╭─❏ 「 IQC」
-│ What am i, a mind reader?\n│ @` + m.sender.split('@')[0] + '! you forgot the text, genius.\n│ Example: ' + prefix + 'iqc Hello Clinton\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧', { mentions: [m.sender] });
+│ What am i, a mind reader?\n│ @` + m.sender.split('@')[0] + '! you forgot the text, genius.\n│ Example: ' + prefix + 'iqc Hello Clinton\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇', { mentions: [m.sender] });
         }
 
         try {
@@ -43,7 +43,7 @@ export default {
             await client.sendMessage(m.chat, {
                 image: imageResponse.data,
                 caption: `╭─❏ 「 IPHONE CHAT」
-│ There's your fake chat screenshot.\n│ Now you can pretend someone actually\n│ talks to you.\n│ \n│ Text: "${text}"\n│ Time: ${currentTime}\n│ \n│ _Don't use this to catfish people,\n│ you weirdo._\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+│ There's your fake chat screenshot.\n│ Now you can pretend someone actually\n│ talks to you.\n│ \n│ Text: "${text}"\n│ Time: ${currentTime}\n│ \n│ _Don't use this to catfish people,\n│ you weirdo._\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
             });
 
         } catch (error) {
@@ -64,7 +64,7 @@ export default {
             }
 
             await sendInteractive(client, m, `╭─❏ 「 FAILED」
-│ iPhone chat generation failed.\n│ ${errorMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ iPhone chat generation failed.\n│ ${errorMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

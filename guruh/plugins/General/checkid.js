@@ -16,7 +16,7 @@ export default {
             if (!link) {
                 await client.sendMessage(m.chat, { react: { text: '', key: m.reactKey } }).catch(() => {});
                 return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Where\`s the link?\n│ Example: ` + prefix + "checkid https://chat.whatsapp.com/xxxxx\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧");
+│ Where\`s the link?\n│ Example: ` + prefix + "checkid https://chat.whatsapp.com/xxxxx\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇");
             }
 
             await client.sendMessage(m.chat, { react: { text: `⌛`, key: m.reactKey } });
@@ -27,7 +27,7 @@ export default {
             } catch {
                 await client.sendMessage(m.chat, { react: { text: ``, key: m.reactKey } });
                 return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ That\`s not a valid URL.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ That\`s not a valid URL.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
 
             let id = '';
@@ -86,7 +86,7 @@ export default {
             console.error(`CheckID error:`, error);
             await client.sendMessage(m.chat, { react: { text: ``, key: m.reactKey } });
             await sendInteractive(client, m, `╭─❏ 「 Cʀᴀsʜᴇᴅ」
-│ Error: ` + error.message + "\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧");
+│ Error: ` + error.message + "\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇");
         }
     }
 };

@@ -11,7 +11,7 @@ export default {
         if (!_isGroup) {
             return sendInteractive(client, m, `╭─❏ 「 Oɴʟɪɴᴇ Lɪsᴛ」
 │
-│ This only works in groups, genius.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ This only works in groups, genius.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
         try {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
@@ -55,14 +55,14 @@ export default {
             return client.sendMessage(m.chat, {
                 text: `╭─❏ 「 Oɴʟɪɴᴇ Mᴇᴍʙᴇʀs」
 │
-${body}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`,
+${body}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`,
                 mentions: onlineList
             });
         } catch {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
             return sendInteractive(client, m, `╭─❏ 「 Oɴʟɪɴᴇ Lɪsᴛ」
 │
-│ Couldn't fetch online members.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Couldn't fetch online members.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

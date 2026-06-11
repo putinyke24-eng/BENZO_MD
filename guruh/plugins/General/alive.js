@@ -15,7 +15,7 @@ export default {
     const { client, m, prefix, pict } = context;
     await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
     await client.sendMessage(m.chat, { react: { text: '🤖', key: m.reactKey } });
-    const bName = botname || 'Toxic-MD';
+    const bName = botname || 'BLACK-PANTHER-MD';
 
     try {
       const uptime = process.uptime();
@@ -42,9 +42,9 @@ export default {
       }
 
       const possibleAudioPaths = [
-        path.join(__dirname, '..', 'xh_clinton', 'test.mp3'),
-        path.join(process.cwd(), 'xh_clinton', 'test.mp3'),
-        path.join(__dirname, 'xh_clinton', 'test.mp3'),
+        path.join(__dirname, '..', 'GuruTech', 'test.mp3'),
+        path.join(process.cwd(), 'GuruTech', 'test.mp3'),
+        path.join(__dirname, 'GuruTech', 'test.mp3'),
       ];
 
       for (const audioPath of possibleAudioPaths) {

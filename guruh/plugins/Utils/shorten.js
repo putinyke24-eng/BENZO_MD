@@ -12,7 +12,7 @@ export default {
         if (!url || !url.startsWith('http')) {
             return sendInteractive(client, m, `╭─❏ 「 URL Sʜᴏʀᴛᴇɴᴇʀ」
 │
-│ Give me a valid URL to shorten.\n│ Usage: .shorten https://example.com/very/long/url\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Give me a valid URL to shorten.\n│ Usage: .shorten https://example.com/very/long/url\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
         try {
             await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -21,12 +21,12 @@ export default {
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             return sendInteractive(client, m, `╭─❏ 「 URL Sʜᴏʀᴛᴇɴᴇʀ」
 │
-│ 🔗 Original: ${url.slice(0,60)}${url.length>60?'...':''}\n│ ✅ Shortened: ${short}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ 🔗 Original: ${url.slice(0,60)}${url.length>60?'...':''}\n│ ✅ Shortened: ${short}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         } catch {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
             return sendInteractive(client, m, `╭─❏ 「 URL Sʜᴏʀᴛᴇɴᴇʀ」
 │
-│ Couldn't shorten that. It stays long.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Couldn't shorten that. It stays long.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

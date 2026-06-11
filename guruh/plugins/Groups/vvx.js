@@ -6,7 +6,7 @@ export default async (context) => {
 
     if (!m.quoted) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-        return sendInteractive(client, m, `╭─❏ 「 VIEW ONCE」\n│ Reply to a view-once image or video.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+        return sendInteractive(client, m, `╭─❏ 「 VIEW ONCE」\n│ Reply to a view-once image or video.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 
     try {
@@ -19,18 +19,18 @@ export default async (context) => {
 
         if (!mediaMessage) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `╭─❏ 「 VIEW ONCE」\n│ This message does not contain\n│ view-once media.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `╭─❏ 「 VIEW ONCE」\n│ This message does not contain\n│ view-once media.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const buffer = await client.downloadMediaMessage(mediaMessage);
         if (!buffer || buffer.length === 0) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `╭─❏ 「 VIEW ONCE」\n│ Failed to download media.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `╭─❏ 「 VIEW ONCE」\n│ Failed to download media.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const dest = m.chat;
         const caption = `╭─❏ 「 VIEW ONCE」
-│ Here's your media, perv.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+│ Here's your media, perv.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
         if (imageMsg) {
             await client.sendMessage(dest, { image: buffer, caption });
@@ -45,6 +45,6 @@ export default async (context) => {
     } catch (error) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
         sendInteractive(client, m, `╭─❏ 「 ERROR」
-│ Failed to retrieve view-once media.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Failed to retrieve view-once media.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 };

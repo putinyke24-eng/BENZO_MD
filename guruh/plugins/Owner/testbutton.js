@@ -7,7 +7,7 @@ export default {
 
         await client.sendMessage(m.chat, {
             text: 'Pick a command to run:',
-            footer: 'Toxic-MD',
+            footer: 'BLACK-PANTHER-MD',
             buttonText: 'Open List',
             sections: [{
                 title: 'Bot Commands',

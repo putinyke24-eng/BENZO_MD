@@ -18,7 +18,7 @@ export default async (context) => {
                 `│ \n` +
                 `│ There are no banned users at the moment.\n` +
                 `╰───────────────\n` +
-                `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+                `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
             );
         }
 
@@ -30,7 +30,7 @@ export default async (context) => {
             `│ \n` +
             `${list}\n` +
             `╰───────────────\n` +
-            `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+            `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
         );
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
     });

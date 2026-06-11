@@ -26,7 +26,7 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
 
           const typesList = CANVAS_TYPES.map(t => `│ • ${t}`).join('\n');
           const usageMsg = `╭─❏ 「 Cᴀɴᴠᴀs Cᴀʀᴅ」
-│ Reply to an image to use this.\n│ \n│ *Usage:*\n│ ${prefix}canvas Title | type | text | watermark\n│ \n│ *Example:*\n│ ${prefix}canvas Blinding Lights | spotify | The Weeknd | TOXIC-MD\n│ ${prefix}canvas My Video | youtube | Subscribe Now | BOT\n│ \n│ *Available Types (${CANVAS_TYPES.length}):*\n${typesList}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞᠊ʀᴇᴅ 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+│ Reply to an image to use this.\n│ \n│ *Usage:*\n│ ${prefix}canvas Title | type | text | watermark\n│ \n│ *Example:*\n│ ${prefix}canvas Blinding Lights | spotify | The Weeknd | BLACK-PANTHER-MD\n│ ${prefix}canvas My Video | youtube | Subscribe Now | BOT\n│ \n│ *Available Types (${CANVAS_TYPES.length}):*\n${typesList}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞᠊ʀᴇᴅ 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
 
           if (!quoted || !/image/.test(mime)) {
               await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
@@ -38,7 +38,7 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
           const rawType = (parts[1] || 'spotify').toLowerCase();
           const type = CANVAS_TYPES.includes(rawType) ? rawType : 'spotify';
           const text = parts[2] || '';
-          const watermark = parts[3] || 'TOXIC-MD';
+          const watermark = parts[3] || 'BLACK-PANTHER-MD';
 
           if (parts[1] && !CANVAS_TYPES.includes(rawType)) {
               return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」

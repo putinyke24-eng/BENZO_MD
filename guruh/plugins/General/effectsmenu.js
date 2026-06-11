@@ -30,18 +30,18 @@ export default {
         for (const cmd of EFFECT_CMDS) {
             menuText += `│ *${toFancyFont(cmd)}*\n`;
         }
-        menuText += `╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+        menuText += `╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
         await client.sendMessage(m.chat, {
             text: menuText,
             contextInfo: {
                 externalAdReply: {
-                    title: 'TOXIC-MD — Text Effects',
+                    title: 'BLACK-PANTHER-MD — Text Effects',
                     body: '30 text effects. Go make something ugly.',
                     mediaType: 1,
                     thumbnail: pict,
-                    sourceUrl: 'https://github.com/xhclintohn/Toxic-MD',
+                    sourceUrl: 'https://github.com/xhclintohn/BLACK-PANTHER-MD',
                     showAdAttribution: false,
                     renderLargerThumbnail: false }
             }

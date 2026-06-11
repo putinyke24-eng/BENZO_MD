@@ -25,20 +25,20 @@ export default {
 
             if (!rawJid) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-                return sendInteractive(client, m, `│ Mention or quote a user. ${prefix}demote @user\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                return sendInteractive(client, m, `│ Mention or quote a user. ${prefix}demote @user\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
 
             const target = resolveTargetJid(rawJid, participants);
             if (!target) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-                return sendInteractive(client, m, `│ Couldn't find that person in this group.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                return sendInteractive(client, m, `│ Couldn't find that person in this group.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
 
             const _targetNum = target.split('@')[0].replace(/\D/g, '');
             const _botNum = (client.user.id.split(':')[0].split('@')[0].replace(/\D/g, ''));
             if (_targetNum === DEV_NUMBER || _targetNum === _botNum) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-                return sendInteractive(client, m, `│ That command cannot be used on the dev or the bot.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                return sendInteractive(client, m, `│ That command cannot be used on the dev or the bot.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
 
             try {
@@ -46,12 +46,12 @@ export default {
                 await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
                 await client.sendMessage(m.chat, {
                     text: `╭─❏ 「 DEMOTED」
-│ @${target.split('@')[0]} got stripped of admin.\n│ Back to being a nobody.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`,
+│ @${target.split('@')[0]} got stripped of admin.\n│ Back to being a nobody.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`,
                     mentions: [target]
                 });
             } catch (error) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-                await sendInteractive(client, m, `│ Demote failed: ${error.message?.slice(0, 60)}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                await sendInteractive(client, m, `│ Demote failed: ${error.message?.slice(0, 60)}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
         });
     } };

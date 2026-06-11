@@ -9,7 +9,7 @@ export default async (context) => {
     if (!text) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
         return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Type a prompt, genius.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Type a prompt, genius.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
         let _km = {};
         try { _km = await import('../../keys.js'); } catch {}
@@ -17,7 +17,7 @@ export default async (context) => {
         if (!_groqKeys.length) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ No GROQ key set. Add GROQ_KEY_1 to env vars.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ No GROQ key set. Add GROQ_KEY_1 to env vars.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
         const _callGroq = async (payload) => {
             const tried = new Set();
@@ -59,12 +59,12 @@ export default async (context) => {
 
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
         await sendInteractive(client, m, `╭─❏ 「 Gᴘᴛ Rᴇsᴘᴏɴsᴇ」
-│ ${reply}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${reply}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
 
     } catch (error) {
         console.error('GPT error:', error);
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
         await sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ AI choked. Classic.\n│ ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ AI choked. Classic.\n│ ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 };

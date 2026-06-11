@@ -9,7 +9,7 @@ export default async (context) => {
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
 
         const fmt = (msg) => `╭─❏ 「 ONLINE PRIVACY」
-│ ${msg}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+│ ${msg}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
         const options = ['all', 'match_last_seen'];
         const value = (args[0] || '').toLowerCase();
 

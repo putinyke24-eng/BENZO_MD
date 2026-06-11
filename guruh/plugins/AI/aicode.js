@@ -9,7 +9,7 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
       if (!text) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
           return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Provide a language and prompt.\n│ Usage: ${prefix}aicode <language> <prompt>\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Provide a language and prompt.\n│ Usage: ${prefix}aicode <language> <prompt>\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
 
       const [language, ...promptArr] = text.split(' ');
@@ -18,7 +18,7 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
       if (!language || !prompt) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
           return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Missing language or prompt.\n│ Example: ${prefix}aicode python hello world\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Missing language or prompt.\n│ Example: ${prefix}aicode python hello world\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
       let _km = {};
       try { _km = await import('../../keys.js'); } catch {}
@@ -26,7 +26,7 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
       if (!_groqKeys.length) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
           return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ No GROQ key set. Add GROQ_KEY_1 to env vars.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ No GROQ key set. Add GROQ_KEY_1 to env vars.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
       const _callGroq = async (payload) => {
           const tried = new Set();
@@ -65,12 +65,12 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
           await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
           sendInteractive(client, m, `╭─❏ 「 Aɪ Cᴏᴅᴇ」
 │ Language: ${language}\n│
-${code}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+${code}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       } catch (error) {
           console.error('aicode error:', error);
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
           sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Code generation failed. ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Code generation failed. ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
   };
   

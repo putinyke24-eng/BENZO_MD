@@ -11,7 +11,7 @@ export default async (context) => {
       "" +
       "│ 🚫 Please provide a search term!\n" +
       "│ Example: .google What is treason\n" +
-      "╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧"
+      "╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇"
     );
     return;
   }
@@ -27,7 +27,7 @@ export default async (context) => {
         "│ ERROR\n" +
         "" +
         "│ ❌ Unable to find any results\n" +
-        "╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧"
+        "╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇"
       );
       return;
     }
@@ -54,7 +54,7 @@ export default async (context) => {
       "│ ERROR\n" +
       "" +
       "│ ❌ An error occurred: " + e.message + "\n" +
-      "╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧"
+      "╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇"
     );
   }
 };

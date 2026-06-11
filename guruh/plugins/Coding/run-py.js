@@ -13,12 +13,12 @@ async function runCode() {
     let result = await python.runSource(code);
     console.log(result);
     sendInteractive(client, m, `╭─❏ 「 PYTHON OUTPUT」
-│ ${result.stdout || 'No output'}\n${result.stderr ? '│ stderr: ' + result.stderr + '\n' : ''}╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${result.stdout || 'No output'}\n${result.stderr ? '│ stderr: ' + result.stderr + '\n' : ''}╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
   } catch (err) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
     console.log(err);
     sendInteractive(client, m, `╭─❏ 「 PYTHON ERROR」
-│ ${err.stderr || err.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${err.stderr || err.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
   }
 }
 
@@ -27,7 +27,7 @@ runCode();
 } else { 
 
 sendInteractive(client, m, `╭─❏ 「 PYTHON COMPILER」
-│ Quote a valid and short Python code\n│ to compile, you absolute walnut.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`)
+│ Quote a valid and short Python code\n│ to compile, you absolute walnut.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`)
 
 }
 

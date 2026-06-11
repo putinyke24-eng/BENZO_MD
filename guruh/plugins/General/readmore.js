@@ -12,7 +12,7 @@ export default {
         if (!text) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             return sendInteractive(client, m, `╭─❏ 「 READ MORE」
-│ Usage: ${prefix}readmore visible text|hidden text\n│ The text after | will be hidden.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Usage: ${prefix}readmore visible text|hidden text\n│ The text after | will be hidden.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
         const parts = text.split('|');
         const visible = parts[0] || '';

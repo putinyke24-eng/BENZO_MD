@@ -5,7 +5,7 @@ export default async (context) => {
     const { client, m, groupMetadata, text } = context;
     await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
 
-    if (!m.isGroup) return sendInteractive(client, m, `│ Command meant for groups.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+    if (!m.isGroup) return sendInteractive(client, m, `│ Command meant for groups.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
 
     const resolveParticipantJid = (p, participants) => {
         if (p.pn) return String(p.pn).replace(/\D/g, '') + '@s.whatsapp.net';
@@ -22,12 +22,12 @@ export default async (context) => {
             `│ Message: ${text ? text : 'Yo, listen up!'}`,
             `│ `,
             ...mentions.map(id => `│ @${id.split('@')[0]}`),
-            `╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+            `╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
         ].join('\n');
         await client.sendMessage(m.chat, { text: txt, mentions });
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
     } catch (error) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-        await sendInteractive(client, m, `│ Failed to tag participants.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+        await sendInteractive(client, m, `│ Failed to tag participants.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 };

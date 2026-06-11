@@ -19,7 +19,7 @@ export default {
                 const body = (Array.isArray(lines) ? lines : [lines]).map(l => `│ ${l}`).join('\n');
                 return `╭─❏ 「 ${title}」
 │
-${body}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+${body}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
             };
 
             try {

@@ -10,9 +10,9 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
           if (!text) {
               await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-              return sendInteractive(client, m, `│ Example: ${prefix}threads https://www.threads.net/@user/post/xxx\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+              return sendInteractive(client, m, `│ Example: ${prefix}threads https://www.threads.net/@user/post/xxx\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
           }
-          if (!text.includes('threads.net')) return sendInteractive(client, m, '│ That\'s not a Threads link.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧');
+          if (!text.includes('threads.net')) return sendInteractive(client, m, '│ That\'s not a Threads link.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇');
           await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
           try {
               const r = await fetch(NEXRAY + encodeURIComponent(text.trim()), { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 20000 });
@@ -24,7 +24,7 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
                   await client.sendMessage(m.chat, {
                       video: { url: res.video },
                       caption: `╭─❏ 「 Threads Video」
-│ ${res.author || ''}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`,
+│ ${res.author || ''}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`,
                       mimetype: 'video/mp4'
                   });
               } else if (res.image) {
@@ -33,13 +33,13 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
                       await client.sendMessage(m.chat, {
                           image: { url: img },
                           caption: `╭─❏ 「 Threads Image」
-│ ${res.author || ''}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+│ ${res.author || ''}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
                       });
                   }
               } else throw new Error('No media found in this Threads post');
           } catch (e) {
               await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-              sendInteractive(client, m, `│ Failed: ${e.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+              sendInteractive(client, m, `│ Failed: ${e.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
           }
       }
   };

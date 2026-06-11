@@ -25,10 +25,10 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
       const id = extractYtId(urlPart);
       if (!id) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-          return sendInteractive(client, m, '╭─❏ 「 YTMP4」\n│ Invalid YouTube link.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧');
+          return sendInteractive(client, m, '╭─❏ 「 YTMP4」\n│ Invalid YouTube link.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇');
       }
       await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
-      await sendInteractive(client, m, `╭─❏ 「 YTMP4」\n│ Processing ${quality}p... This may take up to 60s.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+      await sendInteractive(client, m, `╭─❏ 「 YTMP4」\n│ Processing ${quality}p... This may take up to 60s.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       try {
           const fullUrl = `https://youtube.com/watch?v=${id}`;
           const apiUrl = NEXRAY_MP4 + encodeURIComponent(fullUrl) + `&resolusi=${quality}`;
@@ -40,12 +40,12 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
               video: { url: videoUrl },
               mimetype: 'video/mp4',
               caption: `╭─❏ 「 YouTube MP4」
-│ 🎬 ${title || 'Unknown'}\n│ ⏱ ${fmtDuration(duration)}\n│ 📺 Quality: ${quality}p\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+│ 🎬 ${title || 'Unknown'}\n│ ⏱ ${fmtDuration(duration)}\n│ 📺 Quality: ${quality}p\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
           });
           await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
       } catch (e) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-          sendInteractive(client, m, `╭─❏ 「 YTMP4」\n│ YouTube MP4 download failed.\n│ Video might be age-restricted,\n│ unavailable, or too large.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+          sendInteractive(client, m, `╭─❏ 「 YTMP4」\n│ YouTube MP4 download failed.\n│ Video might be age-restricted,\n│ unavailable, or too large.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
   };
   

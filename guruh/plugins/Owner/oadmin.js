@@ -8,16 +8,16 @@ export default async (context) => {
 
                  if (!m.isGroup) {
                      await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-                     return sendInteractive(client, m, `│ \n│ This command is meant for groups.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                     return sendInteractive(client, m, `│ \n│ This command is meant for groups.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
                  }
          if (!isBotAdmin) {
              await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-             return sendInteractive(client, m, `│ \n│ I need admin privileges.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`); 
+             return sendInteractive(client, m, `│ \n│ I need admin privileges.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`); 
          }
 
                  await client.groupParticipantsUpdate(m.chat,  [m.sender], 'promote'); 
  sendInteractive(client, m, `╭─❏ 「 PROMOTED」
-│ Promoted. Now you have power.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`); 
+│ Promoted. Now you have power.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`); 
           })
 
 }

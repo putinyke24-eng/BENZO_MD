@@ -14,7 +14,7 @@ export default async (context) => {
     let imdbt = "";
 
     imdbt += "";
-    imdbt += "│ TOXIC-MD MOVIE SEARCH\n";
+    imdbt += "│ BLACK-PANTHER-MD MOVIE SEARCH\n";
     imdbt += "";
     imdbt += "│ 🎬 Title       : " + fids.data.Title + "\n";
     imdbt += "│ 📅 Year        : " + fids.data.Year + "\n";
@@ -33,7 +33,7 @@ export default async (context) => {
     imdbt += "│ 🏭 Production  : " + fids.data.Production + "\n";
     imdbt += "│ 🌟 imdbRating  : " + fids.data.imdbRating + "\n";
     imdbt += "│ 🗳️ imdbVotes   : " + fids.data.imdbVotes + "\n";
-    imdbt += "╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧";
+    imdbt += "╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇";
 
     await client.sendMessage(
       m.chat,

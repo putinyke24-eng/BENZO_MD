@@ -14,12 +14,12 @@ export default {
             await client.sendMessage(m.chat, {
                 image: { url },
                 caption: `╭─❏ 「 Bʟᴜsʜ」
-╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
             });
         } catch (error) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
             await sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Too embarrassed to show up!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Too embarrassed to show up!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

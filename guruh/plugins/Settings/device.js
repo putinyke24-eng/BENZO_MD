@@ -14,7 +14,7 @@ export default {
 
             const fmt = (msg) =>
                 `╭─❏ 「 DEVICE MODE」
-│ ${msg}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+│ ${msg}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
             const value = (args[0] || '').toLowerCase().trim();
 

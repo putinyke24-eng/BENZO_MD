@@ -48,12 +48,12 @@ for (const eff of EFFECTS) {
                     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
                     return sendInteractive(client, m, 
                         `╭─❏ 「 ${effect.label}」
-│ Usage: ${prefix}${effect.name} YourText\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+│ Usage: ${prefix}${effect.name} YourText\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
                     );
                 }
                 if (text.length > 50) {
                     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-                    return sendInteractive(client, m, '│ Text too long. Max 50 chars.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧');
+                    return sendInteractive(client, m, '│ Text too long. Max 50 chars.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇');
                 }
                 try {
                     await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -62,12 +62,12 @@ for (const eff of EFFECTS) {
                     await client.sendMessage(m.chat, {
                         image: imgBuffer,
                         caption: `╭─❏ 「 ${effect.label}」
-╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
                     });
                 } catch (err) {
                     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
                     await sendInteractive(client, m, `╭─❏ 「 ${effect.label}」
-│ Failed: ${err.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Failed: ${err.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
                 }
             };
         })(eff)

@@ -14,7 +14,7 @@ export default {
         if (!prompt) {
             return client.sendMessage(m.chat, {
                 text: `╭─❏ 「 Eʀʀᴏʀ」
-│ Forgot the prompt? Typical.\n│ Example: ${prefix}imagine a cat playing football\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`,
+│ Forgot the prompt? Typical.\n│ Example: ${prefix}imagine a cat playing football\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`,
                 mentions: [m.sender]
             });
         }
@@ -36,7 +36,7 @@ export default {
                 {
                     image: buffer,
                     caption: `╭─❏ 「 Aɪ Iᴍᴀɢᴇ」
-│ Prompt: ${prompt}\n│ Powered by ${botname}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+│ Prompt: ${prompt}\n│ Powered by ${botname}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
                 }
             );
 
@@ -44,7 +44,7 @@ export default {
             console.error('Imagine command error:', error);
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
             await sendInteractive(client, m, `╭─❏ 「 Fᴀɪʟᴇᴅ」
-│ Image generation failed.\n│ ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Image generation failed.\n│ ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

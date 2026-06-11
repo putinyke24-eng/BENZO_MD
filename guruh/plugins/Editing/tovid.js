@@ -12,19 +12,19 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
             if (!m.quoted) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
                 return sendInteractive(client, m, `╭─❏ 「 TO VIDEO」
-│ The command requires a STICKER.\n│ Your empty reply suggests you\n│ cannot read.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ The command requires a STICKER.\n│ Your empty reply suggests you\n│ cannot read.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
             const quotedMime = m.quoted.mimetype || '';
             if (!/webp/.test(quotedMime)) return sendInteractive(client, m, `╭─❏ 「 TO VIDEO」
-│ That is a file, not a sticker.\n│ The .webp extension is a clue\n│ you seem to have missed.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ That is a file, not a sticker.\n│ The .webp extension is a clue\n│ you seem to have missed.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             const statusMsg = await sendInteractive(client, m, `╭─❏ 「 TO VIDEO」
-│ Forcing your static sticker into\n│ a video. A pointless endeavor.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Forcing your static sticker into\n│ a video. A pointless endeavor.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             const stickerBuffer = await m.quoted.download();
             if (!stickerBuffer) {
                 await client.sendMessage(m.chat, { delete: statusMsg.key });
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
                 return sendInteractive(client, m, `╭─❏ 「 FAILED」
-│ Failed to download. Your sticker is\n│ as inaccessible as common sense.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Failed to download. Your sticker is\n│ as inaccessible as common sense.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
             const stickerUrl = await uploadTempUrl(stickerBuffer, 'webp');
             const encodedUrl = encodeURIComponent(stickerUrl);
@@ -37,9 +37,9 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
             await client.sendMessage(m.chat, { delete: statusMsg.key });
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             await client.sendMessage(m.chat, { video: videoBuffer, caption: `╭─❏ 「 TO VIDEO」
-│ Behold, your motionless "video".\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧` });
+│ Behold, your motionless "video".\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇` });
             await client.sendMessage(m.chat, { document: videoBuffer, mimetype: 'video/mp4', fileName: `sticker_${Date.now()}.mp4`, caption: `╭─❏ 「 MP4 FILE」
-│ Document version. Marginally\n│ more useful.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧` });
+│ Document version. Marginally\n│ more useful.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇` });
         } catch (err) {
             console.error('ToMP4 error:', err);
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
@@ -49,7 +49,7 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
             if (err.message.includes('upload') || err.message.includes('Upload')) userMessage = "Upload failed on all services. Try again later.";
             if (err.message.includes('converter deemed')) userMessage = 'The conversion API refused to process this. Try a simpler sticker.';
             await sendInteractive(client, m, `╭─❏ 「 FAILED」
-│ ${userMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${userMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

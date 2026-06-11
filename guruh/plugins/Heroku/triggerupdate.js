@@ -13,7 +13,7 @@ export default async (context) => {
             `` +
             `│ ${message}\n` +
             `╰───────────────
-> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧\n` +
+> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇\n` +
             `xD`
         );
     };
@@ -60,7 +60,7 @@ export default async (context) => {
                 {
                     text: formatStylishReply(
                         "🚀 Update triggered.\n" +
-                        "Sit tight while Toxic-MD resurrects with fresh upgrades. 🔥"
+                        "Sit tight while BLACK-PANTHER-MD resurrects with fresh upgrades. 🔥"
                     ) }
             );
 

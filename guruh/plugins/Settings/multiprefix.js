@@ -9,7 +9,7 @@ export default async (context) => {
         const { client, m, args, prefix } = context;
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
 
-        const fmt = (msg) => `╭─❏ 「 MULTIPREFIX」\n│ ${msg}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+        const fmt = (msg) => `╭─❏ 「 MULTIPREFIX」\n│ ${msg}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
         try {
             const settings = await getSettings();
@@ -41,7 +41,7 @@ export default async (context) => {
             const _devMode = await getDeviceMode();
             if (_devMode === 'ios') {
                 await client.sendMessage(m.chat, { react: { text: '📋', key: m.reactKey } });
-                await sendInteractive(client, m, `╭─❏ 「 MULTIPREFIX」\n│ Status: ${isEnabled ? 'ON ✅' : 'OFF ❌'}\n│ \n│ Options:\n│ ${prefix}multiprefix on\n│ ${prefix}multiprefix off\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                await sendInteractive(client, m, `╭─❏ 「 MULTIPREFIX」\n│ Status: ${isEnabled ? 'ON ✅' : 'OFF ❌'}\n│ \n│ Options:\n│ ${prefix}multiprefix on\n│ ${prefix}multiprefix off\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             } else {
                 const _multiprefixMsg = generateWAMessageFromContent(
                     m.chat,

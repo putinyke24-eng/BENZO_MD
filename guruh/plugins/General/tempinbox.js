@@ -14,7 +14,7 @@ export default {
 
         if (!sessionId) {
             return sendInteractive(client, m, `╭─❏ 「 Tᴇᴍᴘ Iɴʙᴏx」
-│ Yo, where's the session ID?\n│ You created the temp mail, right?\n│ Usage: ${prefix}tempinbox YOUR_SESSION_ID\n│ Example: ${prefix}tempinbox U2Vzc2lvbjoc5LI1OhFHh4tv21skV965\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Yo, where's the session ID?\n│ You created the temp mail, right?\n│ Usage: ${prefix}tempinbox YOUR_SESSION_ID\n│ Example: ${prefix}tempinbox U2Vzc2lvbjoc5LI1OhFHh4tv21skV965\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -34,7 +34,7 @@ export default {
 
             if (totalEmails === 0) {
                 return sendInteractive(client, m, `╭─❏ 「 Tᴇᴍᴘ Iɴʙᴏx」
-│ Inbox is empty, genius.\n│ No emails yet.\n│ Use your temp email somewhere\n│ and check back.\n│ Total Emails: 0\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Inbox is empty, genius.\n│ No emails yet.\n│ Use your temp email somewhere\n│ and check back.\n│ Total Emails: 0\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
 
             let inboxText = `╭─❏ 「 Tᴇᴍᴘ Iɴʙᴏx」
@@ -53,7 +53,7 @@ export default {
                 }
             });
 
-            inboxText += `╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+            inboxText += `╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
             if (inboxText.length > 4000) {
                 const firstPart = inboxText.substring(0, 4000);
@@ -81,6 +81,6 @@ export default {
             }
 
             await sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ ${errorMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${errorMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     } };

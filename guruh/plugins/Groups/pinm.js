@@ -33,7 +33,7 @@ async function sendPinButtons(client, m, fq, prefix) {
 ` +
         `│ How long should it stay pinned?\n│
 ` +
-        `╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+        `╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
     const _dev = await getDeviceMode();
     if (_dev === 'ios') {
         return sendInteractive(client, m, `${bodyText}\n\n│ Use:\n│ ${p}pinm 24h\n│ ${p}pinm 7d\n│ ${p}pinm 30d`);
@@ -76,7 +76,7 @@ export default {
 
         if (!IsGroup) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `│ \n│ Groups only.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `│ \n│ Groups only.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const rawInput = args[0] || '';
@@ -111,7 +111,7 @@ export default {
 
         if (!messageKey) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return sendInteractive(client, m, `│ \n│ Reply to a message first, then use ${prefix}pinm.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            return sendInteractive(client, m, `│ \n│ Reply to a message first, then use ${prefix}pinm.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const pinTime = time || 86400;
@@ -121,10 +121,10 @@ export default {
             await client.sendMessage(m.chat, { pin: messageKey, type: 1, time: pinTime });
             global._toxicPinPending.delete(m.chat);
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
-            await sendInteractive(client, m, `│ \n│ 📌 Message pinned!\n│ Duration: ${durationLabel(pinTime)}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            await sendInteractive(client, m, `│ \n│ 📌 Message pinned!\n│ Duration: ${durationLabel(pinTime)}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         } catch (error) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            await sendInteractive(client, m, `│ \n│ ❌ Failed to pin: ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            await sendInteractive(client, m, `│ \n│ ❌ Failed to pin: ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

@@ -8,7 +8,7 @@ export default async (context) => {
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
         return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Command meant for groups.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Command meant for groups.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 
     try {
@@ -23,11 +23,11 @@ export default async (context) => {
         const cont = './contacts.vcf';
 
         await sendInteractive(client, m, `╭─❏ 「 VCF」
-│ A moment, Toxic-MD is compiling\n│ ${gcdata.participants.length} contacts into a VCF...\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ A moment, BLACK-PANTHER-MD is compiling\n│ ${gcdata.participants.length} contacts into a VCF...\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
 
         await fs.promises.writeFile(cont, vcard);
         await sendInteractive(client, m, `╭─❏ 「 VCF」
-│ Import this VCF in a separate\n│ email account to avoid messing\n│ with your contacts...\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Import this VCF in a separate\n│ email account to avoid messing\n│ with your contacts...\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
 
         await client.sendMessage(
             m.chat,
@@ -36,7 +36,7 @@ export default async (context) => {
                 mimetype: 'text/vcard',
                 fileName: 'Group contacts.vcf',
                 caption: `╭─❏ 「 VCF」
-│ VCF for ${gcdata.subject}\n│ ${gcdata.participants.length} contacts\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+│ VCF for ${gcdata.subject}\n│ ${gcdata.participants.length} contacts\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
             },
             { ephemeralExpiration: 86400 }
         );
@@ -46,6 +46,6 @@ export default async (context) => {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
         console.error(`VCF error: ${error.message}`);
         await sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Failed to generate VCF.\n│ Try again later.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Failed to generate VCF.\n│ Try again later.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 };

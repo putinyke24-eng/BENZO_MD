@@ -37,7 +37,7 @@ export default {
             await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
             if (!target) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-                return sendInteractive(client, m, `│ Tag or quote someone first.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                return sendInteractive(client, m, `│ Tag or quote someone first.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
             const resolvedTarget = resolveDisplayJid(target);
             const tNum = resolvedTarget.split('@')[0];
@@ -56,11 +56,11 @@ export default {
                 `@${sNum} told @${tNum} exactly what they think. No filter whatsoever. 💀`,
             ];
             await client.sendMessage(m.chat, {
-                text: `│ ${lines[Math.floor(Math.random() * lines.length)]}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`,
+                text: `│ ${lines[Math.floor(Math.random() * lines.length)]}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`,
                 mentions: [m.sender, resolvedTarget]
             });
         } catch {
-            await sendInteractive(client, m, `│ Command failed. Try again.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            await sendInteractive(client, m, `│ Command failed. Try again.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

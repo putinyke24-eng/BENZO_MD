@@ -18,7 +18,7 @@ export default async (context) => {
     if (!m.isGroup) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
         return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ This command is meant for groups.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ This command is meant for groups.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 
     let info = await client.groupMetadata(m.chat);
@@ -53,7 +53,7 @@ export default async (context) => {
 │ Edit Info : ${info.restrict ? 'Admins Only' : 'Everyone'}
 │ Add Members : ${info.memberAddMode ? 'Everyone' : 'Admins Only'}
 ╰───────────────
-> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
     await client.sendMessage(m.chat, { 
         image: { url: pp }, 

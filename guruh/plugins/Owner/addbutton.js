@@ -11,18 +11,18 @@ export default {
       if (args.length < 2) {
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
         await sendInteractive(client, m, `╭─❏ 「 USAGE」
-│ .addbutton <button_name> <command>\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ .addbutton <button_name> <command>\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         return;
       }
       const buttonName = args[0];
       const command = args[1];
       await sendInteractive(client, m, `╭─❏ 「 BUTTON ADDED」
-│ Added button "${buttonName}"\n│ for command "${command}"\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Added button "${buttonName}"\n│ for command "${command}"\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     } catch (error) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
       console.error(`AddButton error: ${error.stack}`);
       await sendInteractive(client, m, `╭─❏ 「 ERROR」
-│ Error adding custom button.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Error adding custom button.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
   }
 };

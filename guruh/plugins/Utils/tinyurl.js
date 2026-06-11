@@ -9,12 +9,12 @@ export default {
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
 
         const formatStylishReply = (message) => {
-            return `│ ${message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+            return `│ ${message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
         };
 
         if (!text) {
             return client.sendMessage(m.chat, {
-                text: formatStylishReply("You forgot the URL, genius. 🤦🏻\nExample: .shorten https://github.com/xhclintohn/Toxic-MD")
+                text: formatStylishReply("You forgot the URL, genius. 🤦🏻\nExample: .shorten https://github.com/xhclintohn/BLACK-PANTHER-MD")
             });
         }
 

@@ -12,7 +12,7 @@ export default async (context) => {
 
     const formatStylishReply = (message) => {
       return `│ ${message}\n╰───────────────
-> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
     };
 
     try {
@@ -36,7 +36,7 @@ export default async (context) => {
 
       const value = args[0]?.toLowerCase();
       let groupSettings = await getGroupSettings(jid);
-      console.log('Toxic-MD: Group settings for', jid, ':', groupSettings);
+      console.log('BLACK-PANTHER-MD: Group settings for', jid, ':', groupSettings);
       let isEnabled = groupSettings?.events === true || groupSettings?.events === 1;
 
       if (value === 'on' || value === 'off') {
@@ -105,7 +105,7 @@ export default async (context) => {
       }
     } catch (error) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-      console.error('Toxic-MD: Error in events.js:', error.stack);
+      console.error('BLACK-PANTHER-MD: Error in events.js:', error.stack);
       await client.sendMessage(
         m.chat,
         {

@@ -7,9 +7,9 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
       if (!text) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-          return sendInteractive(client, m, `│ Example: ${prefix}twitter https://x.com/user/status/xxxx\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+          return sendInteractive(client, m, `│ Example: ${prefix}twitter https://x.com/user/status/xxxx\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
-      if (!text.includes('twitter.com') && !text.includes('x.com') && !text.includes('t.co')) return sendInteractive(client, m, '│ That\'s not a Twitter/X link.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧');
+      if (!text.includes('twitter.com') && !text.includes('x.com') && !text.includes('t.co')) return sendInteractive(client, m, '│ That\'s not a Twitter/X link.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇');
       await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
       try {
           const r = await fetch(NEXRAY + encodeURIComponent(text.trim()), { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 20000 });
@@ -25,11 +25,11 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
           await client.sendMessage(m.chat, {
               video: buf, mimetype: 'video/mp4',
               caption: `╭─❏ 「 Twitter/X Video」
-│ ${(title || '').slice(0, 80)}\n│ Duration: ${duration || 'N/A'}\n│ Quality: ${best.resolusi || 'HD'}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+│ ${(title || '').slice(0, 80)}\n│ Duration: ${duration || 'N/A'}\n│ Quality: ${best.resolusi || 'HD'}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
           });
       } catch (e) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-          sendInteractive(client, m, `│ Twitter/X download failed.\n│ The tweet might be private or deleted.\n│ Try again later.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+          sendInteractive(client, m, `│ Twitter/X download failed.\n│ The tweet might be private or deleted.\n│ Try again later.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
   };
   

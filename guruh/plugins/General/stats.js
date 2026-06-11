@@ -43,7 +43,7 @@ export default {
 
             const uptime = formatUptime(process.uptime());
             const platform = detectPlatform();
-            const bName = botname || 'Toxic-MD';
+            const bName = botname || 'BLACK-PANTHER-MD';
 
             const cmdCount = Object.keys(commands).length;
             const groupCount = global._toxicGroupMetaCache?.size ?? '?';
@@ -85,14 +85,14 @@ export default {
                 `│
 ` +
                 `╰───────────────\n` +
-                `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+                `> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
             await client.sendMessage(m.chat, { react: { text: '📊', key: m.reactKey } });
             await client.sendMessage(m.chat, { text });
         } catch (e) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             await sendInteractive(client, m, `╭─❏ 「 STATS ERROR」
-│ Something broke fetching stats.\n│ Error: ${e.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Something broke fetching stats.\n│ Error: ${e.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

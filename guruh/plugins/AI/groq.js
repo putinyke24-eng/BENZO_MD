@@ -9,7 +9,7 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
       if (!text) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
           return m.reply(`╭─❏ 「 Eʀʀᴏʀ」
-│ Provide a query, you walnut.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Provide a query, you walnut.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
       let _km = {};
       try { _km = await import('../../keys.js'); } catch {}
@@ -17,7 +17,7 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
       if (!_groqKeys.length) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
           return m.reply(`╭─❏ 「 Eʀʀᴏʀ」
-│ No GROQ key set. Add GROQ_KEY_1 to env vars.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ No GROQ key set. Add GROQ_KEY_1 to env vars.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
       const _callGroq = async (payload) => {
           const tried = new Set();
@@ -55,11 +55,11 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
           if (!content) throw new Error('No response received.');
           await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
           await sendInteractive(client, m, `╭─❏ 「 Gʀᴏǫ Rᴇsᴘᴏɴsᴇ」
-│ ${content}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${content}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       } catch (error) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
           m.reply(`╭─❏ 「 Eʀʀᴏʀ」
-│ ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
   };
   

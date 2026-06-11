@@ -11,14 +11,14 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
       if (!text) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
           return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Give me something to work with.\n│ Chats are stored for context.\n│ To clear history: ${prefix}chat --reset\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Give me something to work with.\n│ Chats are stored for context.\n│ To clear history: ${prefix}chat --reset\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
 
       if (text.toLowerCase().includes('--reset')) {
           await clearConversationHistory(num);
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
           return sendInteractive(client, m, `╭─❏ 「 Cʜᴀᴛ Rᴇsᴇᴛ」
-│ Conversation history cleared.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Conversation history cleared.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
 
       let _km = {};
@@ -27,7 +27,7 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
       if (!_groqKeys.length) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
           return sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ No GROQ key set. Add GROQ_KEY_1 to env vars.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ No GROQ key set. Add GROQ_KEY_1 to env vars.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
       const _callGroq = async (payload) => {
           const tried = new Set();
@@ -71,12 +71,12 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
 
           await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
           await sendInteractive(client, m, `╭─❏ 「 Cʜᴀᴛ」
-│ ${reply}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${reply}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       } catch (error) {
           console.error('chat error:', error);
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
           sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${error.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
   };
   

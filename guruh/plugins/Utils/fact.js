@@ -10,9 +10,9 @@ export default async (context) => {
         if (!fact) throw new Error('no fact');
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
         await sendInteractive(client, m, `╭─❏ 「 RANDOM FACT」
-│ ${fact}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${fact}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     } catch {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-        sendInteractive(client, m, `│ Couldn't fetch a fact. The universe said no.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+        sendInteractive(client, m, `│ Couldn't fetch a fact. The universe said no.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     }
 };

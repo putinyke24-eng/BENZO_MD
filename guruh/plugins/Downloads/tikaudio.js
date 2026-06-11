@@ -7,9 +7,9 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
       if (!text) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-          return sendInteractive(client, m, `│ Example: ${prefix}tikaudio https://vt.tiktok.com/xxx\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+          return sendInteractive(client, m, `│ Example: ${prefix}tikaudio https://vt.tiktok.com/xxx\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
-      if (!text.includes('tiktok.com')) return sendInteractive(client, m, '│ That\'s not a TikTok link.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧');
+      if (!text.includes('tiktok.com')) return sendInteractive(client, m, '│ That\'s not a TikTok link.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇');
       await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
       try {
           const r = await fetch(NEXRAY + encodeURIComponent(text.trim()), { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 20000 });
@@ -28,10 +28,10 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
               fileName: `${music_info.title || title || 'tiktok-audio'}.mp3`
           });
           await sendInteractive(client, m, `╭─❏ 「 TikTok Audio」
-│ 🎵 ${music_info.title || title || 'N/A'}\n│ 👤 ${music_info.author || 'N/A'}\n│ ⏱ ${music_info.duration || 'N/A'}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ 🎵 ${music_info.title || title || 'N/A'}\n│ 👤 ${music_info.author || 'N/A'}\n│ ⏱ ${music_info.duration || 'N/A'}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       } catch (e) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-          sendInteractive(client, m, `│ Failed: ${e.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+          sendInteractive(client, m, `│ Failed: ${e.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
   };
   

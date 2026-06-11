@@ -24,14 +24,14 @@ export default async (context) => {
 │ Synopsis: ${synopsis}
 │ URL: ${data.url}
 ╰───────────────
-> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
     await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
     await client.sendMessage(m.chat, { image: { url: imageUrl }, caption: message });
   } catch (error) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
    sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ An error occurred fetching anime.\n│ Try again, weeb.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ An error occurred fetching anime.\n│ Try again, weeb.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
   }
 
 }

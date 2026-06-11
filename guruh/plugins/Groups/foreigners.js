@@ -24,23 +24,23 @@ export default async (context) => {
         if (!args || !args[0]) {
             if (foreignList.length === 0) {
                 await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
-                return sendInteractive(client, m, `╭─❏ 「 FOREIGNERS」\n│ No foreigners detected. Group is clean, for now.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                return sendInteractive(client, m, `╭─❏ 「 FOREIGNERS」\n│ No foreigners detected. Group is clean, for now.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
             let txt = `╭─❏ 「 FOREIGNERS」
 │ Country code not matching: ${mycode}\n│ Found ${foreignList.length} unwanted guests:\n│ \n`;
             for (const jid of foreignList) txt += `│ @${jid.split('@')[0]}\n`;
-            txt += `│ \n│ Send .foreigners -x to yeet them all\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+            txt += `│ \n│ Send .foreigners -x to yeet them all\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
             await client.sendMessage(m.chat, { text: txt, mentions: foreignList }, { quoted: m });
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
         } else if (args[0] === '-x') {
             await client.sendMessage(m.chat, {
                 text: `╭─❏ 「 PURGE MODE」
-│ Removing all ${foreignList.length} foreigners now.\n│ Goodbye losers, you won't be missed.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+│ Removing all ${foreignList.length} foreigners now.\n│ Goodbye losers, you won't be missed.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
             }, { quoted: m });
             setTimeout(async () => {
                 await client.groupParticipantsUpdate(m.chat, foreignList, 'remove');
                 setTimeout(() => {
-                    sendInteractive(client, m, `│ All foreigners removed. Group cleansed.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                    sendInteractive(client, m, `│ All foreigners removed. Group cleansed.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
                 }, 1000);
             }, 1000);
         }

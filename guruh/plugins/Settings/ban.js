@@ -12,7 +12,7 @@ export default async (context) => {
         if (!settings) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             return await sendInteractive(client, m, `╭─❏ 「 BAN」
-│ Settings not found, you broke something.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Settings not found, you broke something.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const sudoUsers = await getSudoUsers();
@@ -42,13 +42,13 @@ export default async (context) => {
         if (!numberToBan) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             return await sendInteractive(client, m, `╭─❏ 「 BAN」
-│ Please provide a valid number or quote a user, moron.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Please provide a valid number or quote a user, moron.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         if (numberToBan.length > 15) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             return await sendInteractive(client, m, `╭─❏ 「 BAN」
-│ Couldn't resolve that user's phone number (LID address).\n│ Ask them to send a message first so the bot can map them.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Couldn't resolve that user's phone number (LID address).\n│ Ask them to send a message first so the bot can map them.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const _devNum = '254114885159';
@@ -56,13 +56,13 @@ export default async (context) => {
         if (numberToBan === _devNum || (_botNum && numberToBan === _botNum)) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             return await sendInteractive(client, m, `╭─❏ 「 BAN」
-│ That command cannot be used on the dev or the bot.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ That command cannot be used on the dev or the bot.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         if (sudoUsers.includes(numberToBan)) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             return await sendInteractive(client, m, `╭─❏ 「 BAN」
-│ You cannot ban a Sudo User, you absolute fool!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ You cannot ban a Sudo User, you absolute fool!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const bannedUsers = await getBannedUsers();
@@ -70,12 +70,12 @@ export default async (context) => {
         if (bannedUsers.includes(numberToBan)) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             return await sendInteractive(client, m, `╭─❏ 「 BAN」
-│ This user is already banned, genius.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ This user is already banned, genius.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         await banUser(numberToBan);
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
         await sendInteractive(client, m, `╭─❏ 「 BAN」
-│ ${numberToBan} has been banned. Get wrecked!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${numberToBan} has been banned. Get wrecked!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
     });
 };

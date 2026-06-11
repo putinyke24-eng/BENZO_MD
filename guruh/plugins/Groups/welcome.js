@@ -10,7 +10,7 @@ export default async (context) => {
         const jid = m.chat;
 
         const fmt = (msg) =>
-            `│ ${msg}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+            `│ ${msg}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
         try {
             if (!jid.endsWith('@g.us')) {
@@ -79,7 +79,7 @@ export default async (context) => {
             await client.sendMessage(m.chat, { react: { text: '', key: m.reactKey } });
         } catch (error) {
             await client.sendMessage(m.chat, { react: { text: '', key: m.reactKey } }).catch(() => {});
-            console.error('Toxic-MD: Error in welcome.js:', error);
+            console.error('BLACK-PANTHER-MD: Error in welcome.js:', error);
             await client.sendMessage(m.chat, { text: fmt(`Something crashed. Error: ${error.message}`) });
         }
     });

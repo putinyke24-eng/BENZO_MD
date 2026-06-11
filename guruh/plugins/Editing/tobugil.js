@@ -29,7 +29,7 @@ export default {
 
         if (!m.quoted) {
             return sendInteractive(client, m, `╭─❏ 「 TOBUGIL」
-│ Quote an image, you blind moron.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Quote an image, you blind moron.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         const q = m.quoted || m;
@@ -37,7 +37,7 @@ export default {
 
         if (!mime.startsWith("image/")) {
             return sendInteractive(client, m, `╭─❏ 「 TOBUGIL」
-│ That's not an image, you\n│ illiterate fool.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ That's not an image, you\n│ illiterate fool.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
 
         try {
@@ -70,7 +70,7 @@ export default {
                 {
                     image: { url: resultUrl },
                     caption: `╭─❏ 「 TOBUGIL」
-│ Wkwk.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+│ Wkwk.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
                 }
             );
 
@@ -93,6 +93,6 @@ export default {
             }
 
             await sendInteractive(client, m, `╭─❏ 「 FAILED」
-│ ${errorMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${errorMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     } };

@@ -19,7 +19,7 @@ export default {
         } catch (error) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
             await sendInteractive(client, m, `╭─❏ 「 Eʀʀᴏʀ」
-│ Husbando fled!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Husbando fled!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
         }
     }
 };

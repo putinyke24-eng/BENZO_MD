@@ -10,7 +10,7 @@ export default async (context) => {
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
 
         const fmt = (title, msg) =>
-            `╭─❏ 「 ${title}」\n│ ${msg}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+            `╭─❏ 「 ${title}」\n│ ${msg}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
 
         try {
             const settings = await getSettings();
@@ -36,7 +36,7 @@ export default async (context) => {
             const _devMode = await getDeviceMode();
             if (_devMode === 'ios') {
                 await client.sendMessage(m.chat, { react: { text: '📋', key: m.reactKey } });
-                return await sendInteractive(client, m, `╭─❏ 「 ANTIVIEWONCE」\n│ Status: ${settings.antiviewonce ? 'ON ✅' : 'OFF ❌'}\n│ \n│ To turn ON:  ${prefix}antiviewonce on\n│ To turn OFF: ${prefix}antiviewonce off\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                return await sendInteractive(client, m, `╭─❏ 「 ANTIVIEWONCE」\n│ Status: ${settings.antiviewonce ? 'ON ✅' : 'OFF ❌'}\n│ \n│ To turn ON:  ${prefix}antiviewonce on\n│ To turn OFF: ${prefix}antiviewonce off\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
 
             const _msg = generateWAMessageFromContent(

@@ -10,13 +10,13 @@ export default async (context) => {
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
 
         if (!herokuAppName || !herokuApiKey) {
-            await sendInteractive(client, m, "╭─❏ 「 SETVAR」\n│ Heroku app name or API key not set, you clown.\n│ Set HEROKU_APP_NAME and HEROKU_API_KEY first!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧");
+            await sendInteractive(client, m, "╭─❏ 「 SETVAR」\n│ Heroku app name or API key not set, you clown.\n│ Set HEROKU_APP_NAME and HEROKU_API_KEY first!\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇");
             return;
         }
 
         if (!text) {
             await sendInteractive(client, m, `╭─❏ 「 SETVAR」
-│ Provide a var and value, moron.\n│ Format: ${prefix}setvar VAR_NAME=VALUE\n│ Example: ${prefix}setvar MYCODE=254\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Provide a var and value, moron.\n│ Format: ${prefix}setvar VAR_NAME=VALUE\n│ Example: ${prefix}setvar MYCODE=254\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             return;
         }
 
@@ -35,22 +35,22 @@ export default async (context) => {
 
                 if (response.status === 200) {
                     await sendInteractive(client, m, `╭─❏ 「 SETVAR」
-│ ${varName} updated to "${value}"\n│ Wait 2min for bot to restart, be patient.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ ${varName} updated to "${value}"\n│ Wait 2min for bot to restart, be patient.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
                 } else {
-                    await sendInteractive(client, m, "│ Failed to update the config var. Try again, loser.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧");
+                    await sendInteractive(client, m, "│ Failed to update the config var. Try again, loser.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇");
                 }
             } catch (error) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
                 const errorMessage = error.response?.data || error.message;
                 await sendInteractive(client, m, `╭─❏ 「 HEROKU ERROR」
-│ Failed to set config var.\n│ ${errorMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+│ Failed to set config var.\n│ ${errorMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
                 console.error("Error updating config var:", errorMessage);
             }
         }
 
         const parts = text.split("=");
         if (parts.length !== 2) {
-            await sendInteractive(client, m, `╭─❏ 「 SETVAR」\n│ Invalid format, you illiterate fool.\n│ Use: ${prefix}setvar VAR_NAME=VALUE\n│ Example: ${prefix}setvar MYCODE=254\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            await sendInteractive(client, m, `╭─❏ 「 SETVAR」\n│ Invalid format, you illiterate fool.\n│ Use: ${prefix}setvar VAR_NAME=VALUE\n│ Example: ${prefix}setvar MYCODE=254\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             return;
         }
 

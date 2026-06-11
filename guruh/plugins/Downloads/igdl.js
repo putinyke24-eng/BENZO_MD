@@ -7,9 +7,9 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
       if (!text) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-          return sendInteractive(client, m, '╭─❏ 「 IGDL」\n│ Give me an Instagram link.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧');
+          return sendInteractive(client, m, '╭─❏ 「 IGDL」\n│ Give me an Instagram link.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇');
       }
-      if (!text.includes('instagram.com')) return sendInteractive(client, m, '╭─❏ 「 IGDL」\n│ That\'s not an Instagram link.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧');
+      if (!text.includes('instagram.com')) return sendInteractive(client, m, '╭─❏ 「 IGDL」\n│ That\'s not an Instagram link.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇');
       await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
       try {
           const r = await fetch(NEXRAY + encodeURIComponent(text.trim()), { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 20000 });
@@ -24,7 +24,7 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
                   if (!dlRes.ok) continue;
                   const buf = Buffer.from(await dlRes.arrayBuffer());
                   const cap = `╭─❏ 「 Instagram DL」
-│ ${title || 'Instagram Post'}\n│ 👤 @${username || 'unknown'}\n│ ❤️ ${likes ? likes.toLocaleString() : 'N/A'} likes | 💬 ${comment ? comment.toLocaleString() : 'N/A'} comments\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`;
+│ ${title || 'Instagram Post'}\n│ 👤 @${username || 'unknown'}\n│ ❤️ ${likes ? likes.toLocaleString() : 'N/A'} likes | 💬 ${comment ? comment.toLocaleString() : 'N/A'} comments\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`;
                   if (item.type === 'mp4') {
                       await client.sendMessage(m.chat, { video: buf, caption: cap, mimetype: 'video/mp4' });
                   } else {
@@ -34,7 +34,7 @@ import { sendInteractive } from '../../lib/sendInteractive.js';
           }
       } catch (e) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-          sendInteractive(client, m, `│ Failed: ${e.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+          sendInteractive(client, m, `│ Failed: ${e.message}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
       }
   };
   

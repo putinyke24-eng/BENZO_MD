@@ -18,20 +18,20 @@ export default {
 
             if (!m.quoted) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-                return sendInteractive(client, m, `╭─❏ 「 TO MP3」\n│ Reply to a video with .tomp3\n│ No video was quoted.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                return sendInteractive(client, m, `╭─❏ 「 TO MP3」\n│ Reply to a video with .tomp3\n│ No video was quoted.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
 
             const quotedMime = m.quoted.mimetype || '';
 
             if (!/video/.test(quotedMime)) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-                return sendInteractive(client, m, `╭─❏ 「 TO MP3」\n│ That is not a video.\n│ Quote a video message and try again.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                return sendInteractive(client, m, `╭─❏ 「 TO MP3」\n│ That is not a video.\n│ Quote a video message and try again.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
 
             const videoBuffer = await m.quoted.download();
             if (!videoBuffer || !videoBuffer.length) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-                return sendInteractive(client, m, `╭─❏ 「 FAILED」\n│ Could not download the video.\n│ Try again or resend the video.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+                return sendInteractive(client, m, `╭─❏ 「 FAILED」\n│ Could not download the video.\n│ Try again or resend the video.\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
             }
 
             const ts = Date.now();
@@ -77,7 +77,7 @@ export default {
                 userMessage = 'Failed to download the video. Try sending it again.';
             }
 
-            await sendInteractive(client, m, `╭─❏ 「 FAILED」\n│ ${userMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`);
+            await sendInteractive(client, m, `╭─❏ 「 FAILED」\n│ ${userMessage}\n╰───────────────\n> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`);
 
         } finally {
             try { if (tempInput) fs.unlinkSync(tempInput); } catch (_) {}

@@ -18,7 +18,7 @@ export default async (context) => {
           `│ Already prefixless, you clueless twit! 😈\n` +
           `│ Stop wasting my time! 🖕\n` +
           `╰───────────────
-> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
         );
       }
       await updateSetting('prefix', '');
@@ -28,7 +28,7 @@ export default async (context) => {
         `│ Prefix obliterated! 🔥\n` +
         `│ I’m prefixless now, bow down! 😈\n` +
         `╰───────────────
-> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
       );
     } else if (newPrefix) {
       if (settings.prefix === newPrefix) {
@@ -38,7 +38,7 @@ export default async (context) => {
           `│ Prefix is already ${newPrefix}, moron! 😈\n` +
           `│ Try something new, fool! 🥶\n` +
           `╰───────────────
-> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
         );
       }
       await updateSetting('prefix', newPrefix);
@@ -48,7 +48,7 @@ export default async (context) => {
         `│ New prefix set to ${newPrefix}! 🔥\n` +
         `│ Obey the new order, king! 😈\n` +
         `╰───────────────
-> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
       );
     } else {
       await sendInteractive(client, m, 
@@ -56,7 +56,7 @@ export default async (context) => {
         `│ Current Prefix: ${settings.prefix || 'No prefix, peasant! 🥶'}\n` +
         `│ Use "${settings.prefix || '.'}prefix null" to go prefixless or "${settings.prefix || '.'}prefix <symbol>" to set one, noob!\n` +
         `╰───────────────
-> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧`
+> ©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐆𝐔𝐑𝐔𝐓𝐄𝐂𝐇`
       );
     }
   });
