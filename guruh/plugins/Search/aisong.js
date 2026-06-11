@@ -1,4 +1,4 @@
-import { makeSong } from '../../lib/toxicApi.js';
+import { makeSong } from '../../lib/api.js';
 import { getSettings } from '../../database/config.js';
 import { sendInteractive } from '../../lib/sendInteractive.js';
 

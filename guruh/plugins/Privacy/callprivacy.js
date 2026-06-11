@@ -29,7 +29,7 @@ export default async (context) => {
         if (_devMode === 'ios') {
           await client.sendMessage(m.chat, { react: { text: '📋', key: m.reactKey } });
           await sendInteractive(client, m, `╭─❏ 「 CALLPRIVACY」
-│ Status: ${isEnabled !== undefined ? (isEnabled ? 'ON ✅' : 'OFF ❌') : settings.callprivacy !== undefined ? (settings.callprivacy ? 'ON ✅' : 'OFF ❌') : 'See settings'}\n│ \n│ Options:\n│ ${prefix}callprivacy all\n│ ${prefix}callprivacy known\n│ ${prefix}callprivacy none\n╰───────────────\n> 🌐 hosting.toxicx.tech`);
+│ Status: ${isEnabled !== undefined ? (isEnabled ? 'ON ✅' : 'OFF ❌') : settings.callprivacy !== undefined ? (settings.callprivacy ? 'ON ✅' : 'OFF ❌') : 'See settings'}\n│ \n│ Options:\n│ ${prefix}callprivacy all\n│ ${prefix}callprivacy known\n│ ${prefix}callprivacy none\n╰───────────────\n> 🌐 hosting.wa.me/254105521300`);
       } else {
     const _msg = generateWAMessageFromContent(m.chat, {
                 interactiveMessage: {

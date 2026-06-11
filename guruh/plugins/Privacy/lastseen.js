@@ -29,7 +29,7 @@ export default async (context) => {
         if (_devMode === 'ios') {
           await client.sendMessage(m.chat, { react: { text: '📋', key: m.reactKey } });
           await sendInteractive(client, m, `╭─❏ 「 LASTSEEN」
-│ Status: ${isEnabled !== undefined ? (isEnabled ? 'ON ✅' : 'OFF ❌') : settings.lastseen !== undefined ? (settings.lastseen ? 'ON ✅' : 'OFF ❌') : 'See settings'}\n│ \n│ Options:\n│ ${prefix}lastseen all\n│ ${prefix}lastseen contacts\n│ ${prefix}lastseen contact_blacklist\n│ ${prefix}lastseen none\n╰───────────────\n> 🌐 hosting.toxicx.tech`);
+│ Status: ${isEnabled !== undefined ? (isEnabled ? 'ON ✅' : 'OFF ❌') : settings.lastseen !== undefined ? (settings.lastseen ? 'ON ✅' : 'OFF ❌') : 'See settings'}\n│ \n│ Options:\n│ ${prefix}lastseen all\n│ ${prefix}lastseen contacts\n│ ${prefix}lastseen contact_blacklist\n│ ${prefix}lastseen none\n╰───────────────\n> 🌐 hosting.wa.me/254105521300`);
       } else {
     const _msg = generateWAMessageFromContent(m.chat, {
                 interactiveMessage: {

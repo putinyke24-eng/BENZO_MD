@@ -52,7 +52,7 @@ export default async (context) => {
       if (_devMode === 'ios') {
           await client.sendMessage(m.chat, { react: { text: '📋', key: m.reactKey } });
           await sendInteractive(client, m, `╭─❏ 「 ANTIEDIT」
-│ Status: ${settings.antiedit ? 'ON ✅' : 'OFF ❌'}\n│ \n│ Options:\n│ ${prefix}antiedit on\n│ ${prefix}antiedit off\n╰───────────────\n> 🌐 hosting.toxicx.tech`);
+│ Status: ${settings.antiedit ? 'ON ✅' : 'OFF ❌'}\n│ \n│ Options:\n│ ${prefix}antiedit on\n│ ${prefix}antiedit off\n╰───────────────\n> 🌐 hosting.wa.me/254105521300`);
       } else {
     const _msg = generateWAMessageFromContent(
             m.chat,
