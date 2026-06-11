@@ -1,7 +1,7 @@
 'use strict';
 // ╔══════════════════════════════════════════════════════════════╗
-//  🐾  BLACK PANTHER MD  —  Connection Handler (Baileys v7)
-//  Owner : GuruTech  |  +254105521300
+//  🐾  BENZO MD  —  Connection Handler (Baileys v7)
+//  Owner : PUTINY_🇷🇺KE  |  +254794703644
 //  • Baileys v7 compatible
 //  • Smart exponential backoff reconnect
 //  • Heroku-safe: exits on QR / loggedOut / sessionReplaced
@@ -30,13 +30,13 @@ const { handleMessage }              = require('./message');
 const { handleGroupUpdate, handleGroupSettingsUpdate } = require('./group');
 
 let handleViewOnceReaction = null;
-try { ({ handleViewOnceReaction } = require('../../guruh/plugins/viewonce_cmd')); } catch {}
+try { ({ handleViewOnceReaction } = require('../../putiny/plugins/viewonce_cmd')); } catch {}
 
 const {
-    PantherAntiCall,
-    PantherAutoBio,
-    PantherAntiDelete,
-    PantherAntiEdit,
+    BenzoAntiCall,
+    BenzoAutoBio,
+    BenzoAntiDelete,
+    BenzoAntiEdit,
     storeMessage,
     getStoredMessage,
     sendWithChannel,
@@ -125,7 +125,7 @@ async function startBot() {
         },
         logger:                         silentLogger,
         printQRInTerminal:              false,
-        browser:                        ['BLACK PANTHER MD', 'Chrome', '121.0.0'],
+        browser:                        ['BENZO_MD', 'Chrome', '121.0.0'],
         markOnlineOnConnect:            true,
         syncFullHistory:                false,
         shouldSyncHistoryMessage:       () => false,
@@ -222,15 +222,15 @@ async function startBot() {
 │
 ╰─❖ *Powered by ${config.OWNER_NAME}* ❖─╯
 
-> © ${config.BOT_NAME} is awesome 🔥`;
+> © ${config.BOT_NAME} THE BEST 🔥`;
 
             sock.sendMessage(ownerJid, { text: startText, contextInfo: channelCtx() }).catch(() => {});
 
             // Auto Bio
             if (config.AUTO_BIO) {
                 PantherAutoBio(sock).catch(() => {});
-                setInterval(() => PantherAutoBio(sock).catch(() => {}), 10 * 60 * 1000);
-                logger.success('AUTOBIO', 'Auto Bio started (every 10 min)');
+                setInterval(() => BENZOAutoBio(sock).catch(() => {}), 10 * 60 * 1000);
+                logger.success('AUTOBIO', 'Auto Bio started (every 24 HRS)');
             }
         }
     });
