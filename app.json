@@ -1,13 +1,13 @@
 {
-  "name": "BLACK PANTHER MD",
+  "name": "BENZO MD",
   "version": "5.0.0",
-  "description": "BLACK PANTHER MD - A Powerful Multi-Device WhatsApp Bot to Enhance Your WhatsApp Experience",
+  "description": "BENZO MD - A Powerful Multi-Device WhatsApp Bot to Enhance Your WhatsApp Experience",
   "logo": "https://files.catbox.moe/y2cw2k.jpg",
   "keywords": [
-    "black-panther-md",
+    "benzo-md",
     "whatsapp-bot",
     "gifted-baileys",
-    "panther-md"
+    "benzo-md"
   ],
   "success_url": "/",
   "stack": "heroku-22",
@@ -19,12 +19,12 @@
     "BOT_NAME": {
       "description": "Name of your bot",
       "required": false,
-      "value": "BLACK PANTHER MD"
+      "value": "BENZO MD"
     },
     "OWNER_NAME": {
       "description": "Owner name",
       "required": false,
-      "value": "GURU-SL"
+      "value": "PUTINY-SL"
     },
     "OWNER_NUMBER": {
       "description": "Your WhatsApp number with country code (e.g., 254712345678)",
@@ -34,7 +34,7 @@
     "MODE": {
       "description": "Bot mode: 'public' (everyone can use) or 'private' (only bot owner)",
       "required": true,
-      "value": "public"
+      "value": "Private"
     },
     "TIME_ZONE": {
       "description": "Your timezone (e.g., Africa/Nairobi, America/New_York, Asia/Kolkata)",
