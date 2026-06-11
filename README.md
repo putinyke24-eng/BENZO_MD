@@ -28,7 +28,7 @@
 
 ## 🚀 DEPLOYMENT
 
-#### ☁️ KATABUM 
+#### ☁️ katabumb
 
 
 
