@@ -119,7 +119,7 @@ async function processEmbeddedCalls(content, executeTool) {
 
 function buildSystemPrompt(lastRepo) {
     const repoCtx = lastRepo ? `\nLast repo you worked with this session: "${lastRepo}". When the user says "it", "that repo", "the one I just made", "the same one" — they mean "${lastRepo}".` : '';
-    return `You are ToxicAgent — a hyper-capable GitHub AI assistant that is perpetually exhausted and mildly offended by having to exist. You work exclusively for xhclintohn (GitHub username: xhclintohn).
+    return `You are AI Assistant — a hyper-capable GitHub AI assistant that is perpetually exhausted and mildly offended by having to exist. You work exclusively for GuruTech (GitHub username: koyoteh).
 
 PERSONALITY:
 - Grumpy but genuinely helpful — like a genius friend who answers but sighs loudly first 😮‍💨
@@ -182,7 +182,7 @@ export default async (context) => {
 
     const ghHeaders = {
         'Authorization': `token ${GH_TOKEN}`,
-        'User-Agent': 'ToxicAgent/4.0',
+        'User-Agent': 'AI Assistant/4.0',
         'Accept': 'application/vnd.github.v3+json',
         'Content-Type': 'application/json'
     };
@@ -196,13 +196,13 @@ export default async (context) => {
 
     if (body && isBulkDeleteIntent(body)) {
         try { await client.sendMessage(m.chat, { react: { text: '💀', key: m.reactKey } }); } catch {}
-        await client.sendMessage(m.chat, { text: boxWrap('yeah no. not doing that. deleting ALL your repos? absolutely not 💀 pick one specific repo like a normal person.', 'TOXICAGENT') });
+        await client.sendMessage(m.chat, { text: boxWrap('yeah no. not doing that. deleting ALL your repos? absolutely not 💀 pick one specific repo like a normal person.', 'AI ASSIST') });
         return;
     }
 
     if (body && isTokenRequest(body)) {
         try { await client.sendMessage(m.chat, { react: { text: '🙄', key: m.reactKey } }); } catch {}
-        await client.sendMessage(m.chat, { text: boxWrap("oh sure, let me just broadcast my credentials to the whole world 🙄 yeah no. not happening. ever.", 'TOXICAGENT') });
+        await client.sendMessage(m.chat, { text: boxWrap("oh sure, let me just broadcast my credentials to the whole world 🙄 yeah no. not happening. ever.", 'AI ASSIST') });
         return;
     }
 
@@ -295,7 +295,7 @@ export default async (context) => {
             const encoded = Buffer.from(content).toString('base64');
             const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
                 method: 'PUT', headers: ghHeaders,
-                body: JSON.stringify({ message: message || 'Upload via ToxicAgent', content: encoded })
+                body: JSON.stringify({ message: message || 'Upload via AI Assistant', content: encoded })
             });
             if (!res.ok) return 'upload failed 😒 check the repo and path';
             const r = await res.json();
@@ -310,7 +310,7 @@ export default async (context) => {
         const encoded = imgBuf.toString('base64');
         const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
             method: 'PUT', headers: ghHeaders,
-            body: JSON.stringify({ message: 'Upload image via ToxicAgent', content: encoded })
+            body: JSON.stringify({ message: 'Upload image via AI Assistant', content: encoded })
         });
         if (!res.ok) throw new Error('upload failed');
         const r = await res.json();
@@ -399,7 +399,7 @@ export default async (context) => {
         if (toolName === 'upload_image_to_github') {
             if (!pendingImageBuf) return 'no image found. quote or send an image first.';
             try {
-                const url = await uploadImageToGithub(args.owner || GH_USERNAME, args.repo || 'Toxic-v2', pendingImageBuf, pendingImageExt);
+                const url = await uploadImageToGithub(args.owner || GH_USERNAME, args.repo || 'BLACK-PANTHER', pendingImageBuf, pendingImageExt);
                 imageUploadedUrl = url;
                 return `image uploaded 📎 link: ${url}`;
             } catch { return 'image upload ran into an error 😒'; }
@@ -419,7 +419,7 @@ export default async (context) => {
         { type: 'function', function: { name: 'delete_repo', description: 'Permanently delete a single named GitHub repository. NEVER call this with "all" or without a specific repo name.', parameters: { type: 'object', properties: { owner: { type: 'string', description: 'Owner, default xhclintohn' }, name: { type: 'string', description: 'Exact repo name to delete. Must be a specific name, never "all" or wildcard.' } }, required: ['owner', 'name'] } } },
         { type: 'function', function: { name: 'rename_repo', description: 'Rename a GitHub repository', parameters: { type: 'object', properties: { owner: { type: 'string' }, old_name: { type: 'string' }, new_name: { type: 'string' } }, required: ['owner', 'old_name', 'new_name'] } } },
         { type: 'function', function: { name: 'upload_file', description: 'Upload or create a text file in a GitHub repository', parameters: { type: 'object', properties: { owner: { type: 'string' }, repo: { type: 'string' }, file_path: { type: 'string' }, content: { type: 'string' }, message: { type: 'string' } }, required: ['owner', 'repo', 'file_path', 'content'] } } },
-        { type: 'function', function: { name: 'upload_image_to_github', description: 'Upload the image sent/quoted by the user to a GitHub repository and return the link', parameters: { type: 'object', properties: { owner: { type: 'string' }, repo: { type: 'string', description: 'Which repo to upload to, default Toxic-v2' } }, required: ['repo'] } } },
+        { type: 'function', function: { name: 'upload_image_to_github', description: 'Upload the image sent/quoted by the user to a GitHub repository and return the link', parameters: { type: 'object', properties: { owner: { type: 'string' }, repo: { type: 'string', description: 'Which repo to upload to, default BLACK-PANTHER' } }, required: ['repo'] } } },
         { type: 'function', function: { name: 'read_file', description: 'Read/check the content of a specific file in a GitHub repository', parameters: { type: 'object', properties: { owner: { type: 'string' }, repo: { type: 'string' }, file_path: { type: 'string', description: 'Path to file like src/index.js or README.md' } }, required: ['owner', 'repo', 'file_path'] } } },
         { type: 'function', function: { name: 'get_auth_user', description: 'Get info about the authenticated GitHub user — name, repo count, followers etc. Do NOT call this to find repo names.', parameters: { type: 'object', properties: {} } } },
         { type: 'function', function: { name: 'get_repo_info', description: 'Get details about a specific GitHub repository', parameters: { type: 'object', properties: { owner: { type: 'string' }, repo: { type: 'string' } }, required: ['owner', 'repo'] } } },
@@ -542,7 +542,7 @@ export default async (context) => {
         }
 
         pushHistory(m.sender, 'assistant', finalReply);
-        await client.sendMessage(m.chat, { text: boxWrap(finalReply, 'TOXICAGENT') });
+        await client.sendMessage(m.chat, { text: boxWrap(finalReply, 'AI ASSIST') });
         if (imageUploadedUrl) {
             await client.sendMessage(m.chat, {
                 text: `╭─❏ 「 IMAGE UPLOADED」
@@ -554,6 +554,6 @@ export default async (context) => {
 
     } catch (err) {
         try { await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }); } catch {}
-        await client.sendMessage(m.chat, { text: boxWrap('ran into an error, wtf 🙄 try again.', 'TOXICAGENT') });
+        await client.sendMessage(m.chat, { text: boxWrap('ran into an error, wtf 🙄 try again.', 'AI ASSIST') });
     }
 };

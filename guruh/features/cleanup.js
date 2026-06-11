@@ -32,20 +32,20 @@ function cleanTmp(maxAgeMs = MAX_AGE_MS) {
 
 function cleanMemory() {
     try {
-        if (global._toxicGroupMetaCache instanceof Map && global._toxicGroupMetaCache.size > MAX_GROUP_CACHE) {
-            const entries = [...global._toxicGroupMetaCache.entries()]
+        if (global._pantherGroupMetaCache instanceof Map && global._pantherGroupMetaCache.size > MAX_GROUP_CACHE) {
+            const entries = [...global._pantherGroupMetaCache.entries()]
                 .sort((a, b) => (a[1].time || 0) - (b[1].time || 0));
-            global._toxicGroupMetaCache.clear();
-            entries.slice(-TRIM_GROUP_CACHE).forEach(([k, v]) => global._toxicGroupMetaCache.set(k, v));
+            global._pantherGroupMetaCache.clear();
+            entries.slice(-TRIM_GROUP_CACHE).forEach(([k, v]) => global._pantherGroupMetaCache.set(k, v));
         }
     } catch {}
 
     try {
-        if (global._toxicPresenceMap instanceof Map && global._toxicPresenceMap.size > MAX_PRESENCE_MAP) {
-            const entries = [...global._toxicPresenceMap.entries()]
+        if (global._pantherPresenceMap instanceof Map && global._pantherPresenceMap.size > MAX_PRESENCE_MAP) {
+            const entries = [...global._pantherPresenceMap.entries()]
                 .sort((a, b) => (a[1].timestamp || 0) - (b[1].timestamp || 0));
-            global._toxicPresenceMap.clear();
-            entries.slice(-TRIM_PRESENCE_MAP).forEach(([k, v]) => global._toxicPresenceMap.set(k, v));
+            global._pantherPresenceMap.clear();
+            entries.slice(-TRIM_PRESENCE_MAP).forEach(([k, v]) => global._pantherPresenceMap.set(k, v));
         }
     } catch {}
 
